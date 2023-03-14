@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FA29C077EF00D73B09 /* AppDelegate.swift */; };
+		F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FC29C077EF00D73B09 /* SceneDelegate.swift */; };
+		F5124A0429C077F100D73B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5124A0329C077F100D73B09 /* Assets.xcassets */; };
+		F5124A0729C077F100D73B09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */; };
+		F5124A1229C077F100D73B09 /* EtiSalatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A1129C077F100D73B09 /* EtiSalatTests.swift */; };
+		F5124A1C29C077F100D73B09 /* EtiSalatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A1B29C077F100D73B09 /* EtiSalatUITests.swift */; };
+		F5124A1E29C077F100D73B09 /* EtiSalatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A1D29C077F100D73B09 /* EtiSalatUITestsLaunchTests.swift */; };
+		F5124A2B29C0783A00D73B09 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */; };
+		F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */; };
+		F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A3229C08C1900D73B09 /* CustomButton.swift */; };
+		F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A3429C093BE00D73B09 /* CheckBox.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5124A0E29C077F100D73B09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F51249EF29C077EF00D73B09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F51249F629C077EF00D73B09;
+			remoteInfo = EtiSalat;
+		};
+		F5124A1829C077F100D73B09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F51249EF29C077EF00D73B09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F51249F629C077EF00D73B09;
+			remoteInfo = EtiSalat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F51249F729C077EF00D73B09 /* EtiSalat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtiSalat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51249FA29C077EF00D73B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F51249FC29C077EF00D73B09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5124A0329C077F100D73B09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5124A0629C077F100D73B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5124A0829C077F100D73B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5124A0D29C077F100D73B09 /* EtiSalatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtiSalatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5124A1129C077F100D73B09 /* EtiSalatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtiSalatTests.swift; sourceTree = "<group>"; };
+		F5124A1729C077F100D73B09 /* EtiSalatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtiSalatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5124A1B29C077F100D73B09 /* EtiSalatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtiSalatUITests.swift; sourceTree = "<group>"; };
+		F5124A1D29C077F100D73B09 /* EtiSalatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtiSalatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
+		F5124A3229C08C1900D73B09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F5124A3429C093BE00D73B09 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F51249F429C077EF00D73B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A0A29C077F100D73B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A1429C077F100D73B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F51249EE29C077EF00D73B09 = {
+			isa = PBXGroup;
+			children = (
+				F51249F929C077EF00D73B09 /* EtiSalat */,
+				F5124A1029C077F100D73B09 /* EtiSalatTests */,
+				F5124A1A29C077F100D73B09 /* EtiSalatUITests */,
+				F51249F829C077EF00D73B09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F51249F829C077EF00D73B09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F51249F729C077EF00D73B09 /* EtiSalat.app */,
+				F5124A0D29C077F100D73B09 /* EtiSalatTests.xctest */,
+				F5124A1729C077F100D73B09 /* EtiSalatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F51249F929C077EF00D73B09 /* EtiSalat */ = {
+			isa = PBXGroup;
+			children = (
+				F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */,
+				F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */,
+				F5124A2E29C087EB00D73B09 /* Views */,
+				F5124A2F29C087F800D73B09 /* supportings */,
+				F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */,
+				F5124A0829C077F100D73B09 /* Info.plist */,
+			);
+			path = EtiSalat;
+			sourceTree = "<group>";
+		};
+		F5124A1029C077F100D73B09 /* EtiSalatTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5124A1129C077F100D73B09 /* EtiSalatTests.swift */,
+			);
+			path = EtiSalatTests;
+			sourceTree = "<group>";
+		};
+		F5124A1A29C077F100D73B09 /* EtiSalatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5124A1B29C077F100D73B09 /* EtiSalatUITests.swift */,
+				F5124A1D29C077F100D73B09 /* EtiSalatUITestsLaunchTests.swift */,
+			);
+			path = EtiSalatUITests;
+			sourceTree = "<group>";
+		};
+		F5124A2E29C087EB00D73B09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5124A3229C08C1900D73B09 /* CustomButton.swift */,
+				F5124A3429C093BE00D73B09 /* CheckBox.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5124A2F29C087F800D73B09 /* supportings */ = {
+			isa = PBXGroup;
+			children = (
+				F51249FC29C077EF00D73B09 /* SceneDelegate.swift */,
+				F51249FA29C077EF00D73B09 /* AppDelegate.swift */,
+				F5124A0329C077F100D73B09 /* Assets.xcassets */,
+			);
+			path = supportings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F51249F629C077EF00D73B09 /* EtiSalat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5124A2129C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalat" */;
+			buildPhases = (
+				F51249F329C077EF00D73B09 /* Sources */,
+				F51249F429C077EF00D73B09 /* Frameworks */,
+				F51249F529C077EF00D73B09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EtiSalat;
+			productName = EtiSalat;
+			productReference = F51249F729C077EF00D73B09 /* EtiSalat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5124A0C29C077F100D73B09 /* EtiSalatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5124A2429C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatTests" */;
+			buildPhases = (
+				F5124A0929C077F100D73B09 /* Sources */,
+				F5124A0A29C077F100D73B09 /* Frameworks */,
+				F5124A0B29C077F100D73B09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5124A0F29C077F100D73B09 /* PBXTargetDependency */,
+			);
+			name = EtiSalatTests;
+			productName = EtiSalatTests;
+			productReference = F5124A0D29C077F100D73B09 /* EtiSalatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5124A1629C077F100D73B09 /* EtiSalatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5124A2729C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatUITests" */;
+			buildPhases = (
+				F5124A1329C077F100D73B09 /* Sources */,
+				F5124A1429C077F100D73B09 /* Frameworks */,
+				F5124A1529C077F100D73B09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5124A1929C077F100D73B09 /* PBXTargetDependency */,
+			);
+			name = EtiSalatUITests;
+			productName = EtiSalatUITests;
+			productReference = F5124A1729C077F100D73B09 /* EtiSalatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F51249EF29C077EF00D73B09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F51249F629C077EF00D73B09 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					F5124A0C29C077F100D73B09 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F51249F629C077EF00D73B09;
+					};
+					F5124A1629C077F100D73B09 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F51249F629C077EF00D73B09;
+					};
+				};
+			};
+			buildConfigurationList = F51249F229C077EF00D73B09 /* Build configuration list for PBXProject "EtiSalat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F51249EE29C077EF00D73B09;
+			productRefGroup = F51249F829C077EF00D73B09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F51249F629C077EF00D73B09 /* EtiSalat */,
+				F5124A0C29C077F100D73B09 /* EtiSalatTests */,
+				F5124A1629C077F100D73B09 /* EtiSalatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F51249F529C077EF00D73B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5124A0729C077F100D73B09 /* LaunchScreen.storyboard in Resources */,
+				F5124A0429C077F100D73B09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A0B29C077F100D73B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A1529C077F100D73B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F51249F329C077EF00D73B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */,
+				F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */,
+				F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */,
+				F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */,
+				F5124A2B29C0783A00D73B09 /* SplashScreenViewController.swift in Sources */,
+				F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A0929C077F100D73B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5124A1229C077F100D73B09 /* EtiSalatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5124A1329C077F100D73B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5124A1E29C077F100D73B09 /* EtiSalatUITestsLaunchTests.swift in Sources */,
+				F5124A1C29C077F100D73B09 /* EtiSalatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5124A0F29C077F100D73B09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F51249F629C077EF00D73B09 /* EtiSalat */;
+			targetProxy = F5124A0E29C077F100D73B09 /* PBXContainerItemProxy */;
+		};
+		F5124A1929C077F100D73B09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F51249F629C077EF00D73B09 /* EtiSalat */;
+			targetProxy = F5124A1829C077F100D73B09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5124A0629C077F100D73B09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5124A1F29C077F100D73B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5124A2029C077F100D73B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5124A2229C077F100D73B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EtiSalat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5124A2329C077F100D73B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EtiSalat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5124A2529C077F100D73B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EtiSalat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EtiSalat";
+			};
+			name = Debug;
+		};
+		F5124A2629C077F100D73B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EtiSalat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EtiSalat";
+			};
+			name = Release;
+		};
+		F5124A2829C077F100D73B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EtiSalat;
+			};
+			name = Debug;
+		};
+		F5124A2929C077F100D73B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2SA2ZNW4VD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EtiSalat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F51249F229C077EF00D73B09 /* Build configuration list for PBXProject "EtiSalat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5124A1F29C077F100D73B09 /* Debug */,
+				F5124A2029C077F100D73B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5124A2129C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5124A2229C077F100D73B09 /* Debug */,
+				F5124A2329C077F100D73B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5124A2429C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5124A2529C077F100D73B09 /* Debug */,
+				F5124A2629C077F100D73B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5124A2729C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5124A2829C077F100D73B09 /* Debug */,
+				F5124A2929C077F100D73B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F51249EF29C077EF00D73B09 /* Project object */;
+}
