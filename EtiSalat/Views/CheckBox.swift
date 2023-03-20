@@ -12,10 +12,9 @@ class CheckBox: UIView {
     private var isChecked = false
     let imageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.isHidden = true
-        imageView.tintColor = .white
+        imageView.tintColor = .darkGray
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: "checkmark")
+        imageView.image = UIImage(systemName: "square")
         return imageView
     }()
     override init(frame: CGRect) {
@@ -33,28 +32,27 @@ class CheckBox: UIView {
     }
     
     func configure(){
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.secondaryLabel.cgColor
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 14),
-            imageView.widthAnchor.constraint(equalToConstant: 14)
+            imageView.heightAnchor.constraint(equalToConstant: 18),
+            imageView.widthAnchor.constraint(equalToConstant: 18)
         ])
     }
     
-    func toggle(){
+    func toggle()-> Bool {
         self.isChecked = !isChecked
         if(isChecked){
-            imageView.isHidden = false
-            backgroundColor = .red
-            layer.borderColor = nil
+            imageView.image = UIImage(systemName: "checkmark.square.fill")
+            imageView.tintColor = .red
         } else {
-            imageView.isHidden = true
+            imageView.image = UIImage(systemName: "square")
             backgroundColor = .systemBackground
+            imageView.tintColor = .darkGray
         }
+        return isChecked
     }
 }

@@ -18,6 +18,17 @@
 		F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */; };
 		F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A3229C08C1900D73B09 /* CustomButton.swift */; };
 		F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5124A3429C093BE00D73B09 /* CheckBox.swift */; };
+		F539C2BD29C43BA700F3C6F6 /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */; };
+		F539C2BF29C4427700F3C6F6 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */; };
+		F539C2C129C45EF400F3C6F6 /* AboutApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */; };
+		F539C2C329C46FD800F3C6F6 /* AboutAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */; };
+		F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */; };
+		F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */; };
+		F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */; };
+		F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */; };
+		F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */; };
+		F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AE29C1DB1A00C92BFD /* PopUp.swift */; };
+		F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1491B29C30772006BA693 /* UIcolors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +64,17 @@
 		F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		F5124A3229C08C1900D73B09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F5124A3429C093BE00D73B09 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
+		F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
+		F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApplicationViewController.swift; sourceTree = "<group>"; };
+		F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppData.swift; sourceTree = "<group>"; };
+		F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNViewController.swift; sourceTree = "<group>"; };
+		F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewController.swift; sourceTree = "<group>"; };
+		F540D3AE29C1DB1A00C92BFD /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		F5D1491B29C30772006BA693 /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +127,13 @@
 			children = (
 				F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */,
 				F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */,
+				F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */,
+				F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */,
+				F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */,
+				F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */,
+				F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */,
+				F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */,
+				F5D1491A29C30756006BA693 /* Extensions */,
 				F5124A2E29C087EB00D73B09 /* Views */,
 				F5124A2F29C087F800D73B09 /* supportings */,
 				F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */,
@@ -135,6 +164,9 @@
 			children = (
 				F5124A3229C08C1900D73B09 /* CustomButton.swift */,
 				F5124A3429C093BE00D73B09 /* CheckBox.swift */,
+				F540D3AE29C1DB1A00C92BFD /* PopUp.swift */,
+				F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */,
+				F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +179,15 @@
 				F5124A0329C077F100D73B09 /* Assets.xcassets */,
 			);
 			path = supportings;
+			sourceTree = "<group>";
+		};
+		F5D1491A29C30756006BA693 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5D1491B29C30772006BA693 /* UIcolors.swift */,
+				F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +321,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */,
+				F539C2BF29C4427700F3C6F6 /* HomescreenViewController.swift in Sources */,
+				F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */,
 				F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */,
+				F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */,
 				F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */,
+				F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */,
+				F539C2C129C45EF400F3C6F6 /* AboutApplicationViewController.swift in Sources */,
+				F539C2BD29C43BA700F3C6F6 /* popUpViewController.swift in Sources */,
+				F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */,
 				F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */,
+				F539C2C329C46FD800F3C6F6 /* AboutAppData.swift in Sources */,
+				F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */,
+				F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */,
 				F5124A2B29C0783A00D73B09 /* SplashScreenViewController.swift in Sources */,
+				F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */,
 				F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

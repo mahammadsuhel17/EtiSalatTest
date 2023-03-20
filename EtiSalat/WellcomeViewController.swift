@@ -8,17 +8,22 @@
 import UIKit
 
 class WellcomeViewController: UIViewController {
-
+    
+    var isChecked = false
     var screenImage = UIImageView()
     var welcomeText = UILabel()
     var bodyText = UILabel()
-    var agreeButton = CustomButton(backgroundcolor: .red, title: "I agree", titleColor: .white)
+    var agreeButton = CustomButton(hasBackground: true, title: "I agree", buttonType: .medium)
     var checkBox = CheckBox()
     var termsText = UILabel()
+    
+    var popUp = PopUp()
+//    var popUp2 = popUpViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationItem.title = ""
         configureUI()
     }
     
@@ -29,6 +34,7 @@ class WellcomeViewController: UIViewController {
         configureAgreeButoon()
         configureCheckBox()
         configureTermsText()
+        configurePopup()
     }
     
     func configureScreenImage (){
@@ -87,7 +93,8 @@ class WellcomeViewController: UIViewController {
     }
     
    @objc func handleCheck (){
-       checkBox.toggle()
+       let isAgree = checkBox.toggle()
+       isChecked = isAgree
     }
     
     func configureTermsText (){
@@ -116,14 +123,53 @@ class WellcomeViewController: UIViewController {
         agreeButton.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
         NSLayoutConstraint.activate([
             agreeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            agreeButton.heightAnchor.constraint(equalToConstant: 34),
-            agreeButton.widthAnchor.constraint(equalToConstant: 93),
             agreeButton.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 68)
         ])
     }
     
+    func configurePopup(){
+        view.addSubview(popUp)
+        popUp.buttonview1.addTarget(self, action: #selector(handleOk), for: .touchUpInside)
+        popUp.title.text = "Attention "
+        popUp.subTitle.text = "Please read and agree to the License Agreement and Privacy Terms before you continue. "
+
+
+        NSLayoutConstraint.activate([
+            popUp.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            popUp.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            popUp.heightAnchor.constraint(equalTo: view.heightAnchor),
+            popUp.widthAnchor.constraint(equalTo: view.widthAnchor),
+            popUp.alertView.heightAnchor.constraint(equalToConstant: 200),
+        ])
+    }
+//    func configurePopup(){
+//        popUp.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//        self.present(popUp, animated: true, completion: nil)
+//        popUp.buttonview1.addTarget(self, action: #selector(handleOk), for: .touchUpInside)
+//        popUp.popUpTitle.text = "Attention "
+//        popUp.subTitle.text = "Please read and agree to the License Agreement and Privacy Terms before you continue. "
+//        NSLayoutConstraint.activate([
+//            popUp.alertView.heightAnchor.constraint(equalToConstant: 200),
+//        ])
+//    }
+    
     @objc func handleAgree (){
-        print("hi")
+        let vc = ActivationViewController()
+        if(isChecked){
+            navigationController?.pushViewController(vc, animated: true)
+        }else{
+            handleShowPopUp()
+        }
+        
+    }
+    
+    
+    @objc func handleShowPopUp(){
+        popUp.handleShow()
+    }
+
+    @objc func handleOk(){
+        popUp.handleHide()
     }
     
     
