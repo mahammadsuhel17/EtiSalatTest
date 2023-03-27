@@ -1,0 +1,31 @@
+/*
+  Localizable.strings
+  EtiSalat
+
+  Created by Mahammadsuel C on 3/27/23.
+  
+*/
+"WELCOME_LABEL_TITLE" = "Welcome";
+"WELCOME_LABEL_DESCRIPTION"  = "Parental Control was developed to keep your family safe from screen addiction and harmful Internet content.";
+"WELCOME_LABEL_TERMS" = "By ticking this box, I consent to the Privacy Terms";
+"WELCOME_LABEL_LICENSE_AGREEMENT" = "By ticking this box, I consent to the End User License Agreement";
+"WELCOME_LABEL_PRIVACY_TERMS" = "Privacy Terms";
+"WELCOME_BUTTON_TITLE" = "Continue";
+"WELCOME_ALERT_TITLE_LABEL" = "Attention";
+"WELCOME_ALERT_DESCRIPTION_LABEL" = "Please read and agree to the License Agreement and Privacy Terms before you continue.";
+"OK" = "Ok";
+
+// Activation screen strings
+"ACTIVATION_LABEL_TITLE" = "Activate the service";
+"ACTIVATION_LABEL_DESCRIPTION" = "The activation key was sent to you. If you cannot find it, please login to the parent portal and go to Devices";
+"ACTIVATION_LABEL_PLACEHOLDER" = "Enter the Key";
+"ACTIVATION_LABEL_BUTTON_TITLE" = "Submit";
+
+// Home screen strings
+
+"HOME_LABEL_TITLE" = "Etisalat child secure app";
+"HOME_LABEL_DISCRIPTION" = "Protecting this device any place any time";
+"HOME_LABEL_TERMS_BUTTON_TITLE" = "About";
+"HOME_LABEL_ABOUT_BUTTON_TITLE" = "Privacy Terms";
+
+

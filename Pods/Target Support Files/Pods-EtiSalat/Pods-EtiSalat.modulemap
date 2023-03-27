@@ -1,0 +1,6 @@
+framework module Pods_EtiSalat {
+  umbrella header "Pods-EtiSalat-umbrella.h"
+
+  export *
+  module * { export * }
+}

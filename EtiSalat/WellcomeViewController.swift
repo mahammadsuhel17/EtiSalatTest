@@ -9,16 +9,100 @@ import UIKit
 
 class WellcomeViewController: UIViewController {
     
-    var isChecked = false
-    var screenImage = UIImageView()
-    var welcomeText = UILabel()
-    var bodyText = UILabel()
-    var agreeButton = CustomButton(hasBackground: true, title: "I agree", buttonType: .medium)
-    var checkBox = CheckBox()
+    var isCheckedLicence = false
+    var isCheckedTerms = false
     var termsText = UILabel()
+    var text = UILabel()
     
-    var popUp = PopUp()
-//    var popUp2 = popUpViewController()
+    // screen image
+    private lazy var screenImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "WelcomeScreenImage")
+        image.width(230)
+        image.height(230)
+        return image
+    }()
+    
+    // title labal
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.text = "WELCOME_LABEL_TITLE".localized()
+        titleLabel.font = APPFont.title
+        titleLabel.textColor = APPThemeColor.title
+        titleLabel.textAlignment = .center
+        return titleLabel
+    }()
+    
+    /// set description label
+    private lazy var descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.text = "WELCOME_LABEL_DESCRIPTION".localized()
+        descriptionLabel.font = APPFont.description
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.textColor = APPThemeColor.description
+        descriptionLabel.textAlignment = .center
+        descriptionLabel.letterSpace = 0.2
+        return descriptionLabel
+    }()
+    
+    
+    // LICENCE CHECK BOX
+    private lazy var lincenceCheckBox: UIButton  = {
+        let lincenceCheckBox = UIButton()
+        lincenceCheckBox.setImage(UIImage(systemName: "square"), for: [])
+        lincenceCheckBox.tintColor = .darkGray
+        lincenceCheckBox.contentMode = .scaleAspectFit
+        lincenceCheckBox.height(18)
+        lincenceCheckBox.width(18)
+        lincenceCheckBox.addTarget(self, action: #selector(handleLicenceCheck), for: .touchUpInside)
+        return lincenceCheckBox
+    }()
+    
+    
+    private lazy var licenseLabel: UILabel = {
+        let licenseLabel = UILabel()
+        licenseLabel.text = "WELCOME_LABEL_LICENSE_AGREEMENT".localized()
+        licenseLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+        licenseLabel.textColor = APPThemeColor.black
+        licenseLabel.numberOfLines = 0
+        return licenseLabel
+    }()
+    
+    
+    // TERMS CHECK BOX
+    private lazy var termCheckBox: UIButton  = {
+        let termCheckBox = UIButton()
+        termCheckBox.setImage(UIImage(systemName: "square"), for: [])
+        termCheckBox.tintColor = .darkGray
+        termCheckBox.contentMode = .scaleAspectFit
+        termCheckBox.height(18)
+        termCheckBox.width(18)
+        termCheckBox.addTarget(self, action: #selector(handleTermsCheck), for: .touchUpInside)
+        return termCheckBox
+    }()
+    
+    private lazy var TermsLabel: UILabel = {
+        let TermsLabel = UILabel()
+        TermsLabel.text = "WELCOME_LABEL_TERMS".localized()
+        TermsLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+        TermsLabel.textColor = .black
+        TermsLabel.numberOfLines = 0
+        return TermsLabel
+    }()
+    
+    
+    private lazy var agreeButton: CustomButton = {
+        let agreeButton = CustomButton(hasBackground: true, title: "I agree", buttonType: .medium)
+        agreeButton.backgroundColor = isCheckedLicence && isCheckedTerms ? APPThemeColor.buttonBackground : APPThemeColor.disabledButtonBackground
+        agreeButton.setTitleColor(APPThemeColor.disabledButtonTitle, for: [])
+        agreeButton.addTarget(self, action: #selector(didTapOnnAgreeButton), for: .touchUpInside)
+        return agreeButton
+    }()
+    
+    private lazy var popUp: popUpViewController = {
+        let popUp = popUpViewController()
+        return popUp
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,149 +112,111 @@ class WellcomeViewController: UIViewController {
     }
     
     func configureUI (){
-        configureScreenImage()
-        configureWelcomeText()
-        configureBodyText()
-        configureAgreeButoon()
-        configureCheckBox()
-        configureTermsText()
-        configurePopup()
-    }
-    
-    func configureScreenImage (){
-        view.addSubview(screenImage)
-        screenImage.translatesAutoresizingMaskIntoConstraints = false
-        screenImage.image = UIImage(named: "WelcomeScreenImage")
         
-        NSLayoutConstraint.activate([
-            screenImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            screenImage.heightAnchor.constraint(equalToConstant: 300),
-            screenImage.widthAnchor.constraint(equalToConstant: 300),
-            screenImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 105)
-        ])
-    }
-    
-    func configureWelcomeText (){
-        view.addSubview(welcomeText)
-        welcomeText.translatesAutoresizingMaskIntoConstraints = false
-        welcomeText.text = "Welcome"
-        welcomeText.textAlignment = .center
-        welcomeText.font = .systemFont(ofSize: 24, weight: .medium)
+        ///  set view for imageview
+        let imageHolderView = UIView()
+        imageHolderView.addSubview(screenImage)
+        screenImage.centerInSuperview()
+        imageHolderView.height(300)
         
-        NSLayoutConstraint.activate([
-            welcomeText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            welcomeText.topAnchor.constraint(equalTo: screenImage.bottomAnchor, constant: 20),
-            welcomeText.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            welcomeText.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-    
-    func configureBodyText (){
-        view.addSubview(bodyText)
-        bodyText.translatesAutoresizingMaskIntoConstraints = false
-        bodyText.text = "Parental Control is developed to keep your family safe from screen addiction and harmful Internet content."
-        bodyText.textAlignment = .center
-        bodyText.font = .systemFont(ofSize: 16, weight: .regular)
-        bodyText.numberOfLines = 0
+        /// set stackview for labels
+        let labelStackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
+        labelStackView.axis = .vertical
+        labelStackView.distribution = .fill
+        labelStackView.alignment = .fill
+        labelStackView.spacing = 20
         
-        NSLayoutConstraint.activate([
-            bodyText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bodyText.topAnchor.constraint(equalTo: welcomeText.bottomAnchor, constant: 20),
-            bodyText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            bodyText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-        ])
-    }
-    func configureCheckBox (){
-        view.addSubview(checkBox)
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleCheck))
-        checkBox.addGestureRecognizer(gesture)
-        NSLayoutConstraint.activate([
-            checkBox.heightAnchor.constraint(equalToConstant: 18),
-            checkBox.widthAnchor.constraint(equalToConstant: 18),
-            checkBox.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 16),
-            checkBox.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16)
-        ])
-    }
-    
-   @objc func handleCheck (){
-       let isAgree = checkBox.toggle()
-       isChecked = isAgree
-    }
-    
-    func configureTermsText (){
-        view.addSubview(termsText)
-        termsText.translatesAutoresizingMaskIntoConstraints = false
-        termsText.textAlignment = .left
-        termsText.textColor = UIColor.blue
-        termsText.font = .systemFont(ofSize: 12, weight: .regular)
-        termsText.numberOfLines = 0
+        /// set stackview for image  and labels
+        let imageLabelStackView = UIStackView(arrangedSubviews: [imageHolderView, labelStackView])
+        imageLabelStackView.axis = .vertical
+        imageLabelStackView.distribution = .fill
+        imageLabelStackView.alignment = .fill
+        imageLabelStackView.spacing = 20
         
-        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
-        let underlineAttributedString = NSAttributedString(string: "I hereby agree to the License Agreement and Privacy Terms", attributes: underlineAttribute)
-        termsText.attributedText = underlineAttributedString
+        self.view.addSubview(imageLabelStackView)
+        imageLabelStackView.topToSuperview(offset: 24, usingSafeArea: true)
+        imageLabelStackView.leftToSuperview(offset: 16)
+        imageLabelStackView.rightToSuperview(offset: -16)
         
-        NSLayoutConstraint.activate([
-            termsText.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 16),
-            termsText.leftAnchor.constraint(equalTo: checkBox.rightAnchor, constant: 10),
-            termsText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16)
-        ])
-    }
-    
-    
-    
-    func configureAgreeButoon (){
-        view.addSubview(agreeButton)
-        agreeButton.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
-        NSLayoutConstraint.activate([
-            agreeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            agreeButton.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 68)
-        ])
-    }
-    
-    func configurePopup(){
-        view.addSubview(popUp)
-        popUp.buttonview1.addTarget(self, action: #selector(handleOk), for: .touchUpInside)
-        popUp.title.text = "Attention "
-        popUp.subTitle.text = "Please read and agree to the License Agreement and Privacy Terms before you continue. "
+        
+        /// set stackview for license and checkBox
+        let licenseLableStackview = UIStackView(arrangedSubviews: [ lincenceCheckBox, licenseLabel])
+        licenseLableStackview.axis = .horizontal
+        licenseLableStackview.distribution = .fillProportionally
+        licenseLableStackview.alignment = .fill
+        licenseLableStackview.spacing = 16
+        
+        self.view.addSubview(licenseLableStackview)
+        licenseLableStackview.topToBottom(of:imageLabelStackView, offset: 30 )
+        licenseLableStackview.leftToSuperview(offset: 16)
+        licenseLableStackview.rightToSuperview(offset: -16)
+        
+        
+        /// set stackview for terms and checkBox
+        let termsLableStackview = UIStackView(arrangedSubviews: [ termCheckBox, TermsLabel])
+        termsLableStackview.axis = .horizontal
+        termsLableStackview.distribution = .fillProportionally
+        termsLableStackview.alignment = .fill
+        termsLableStackview.spacing = 16
 
-
-        NSLayoutConstraint.activate([
-            popUp.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            popUp.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            popUp.heightAnchor.constraint(equalTo: view.heightAnchor),
-            popUp.widthAnchor.constraint(equalTo: view.widthAnchor),
-            popUp.alertView.heightAnchor.constraint(equalToConstant: 200),
-        ])
+        self.view.addSubview(termsLableStackview)
+        termsLableStackview.topToBottom(of:licenseLableStackview, offset: 20 )
+        termsLableStackview.leftToSuperview(offset: 16)
+        termsLableStackview.rightToSuperview(offset: -16)
+        
+//        set agree button
+        self.view.addSubview(agreeButton)
+        agreeButton.centerXToSuperview()
+        agreeButton.topToBottom(of: termsLableStackview, offset: 50)
     }
-//    func configurePopup(){
-//        popUp.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-//        self.present(popUp, animated: true, completion: nil)
-//        popUp.buttonview1.addTarget(self, action: #selector(handleOk), for: .touchUpInside)
-//        popUp.popUpTitle.text = "Attention "
-//        popUp.subTitle.text = "Please read and agree to the License Agreement and Privacy Terms before you continue. "
-//        NSLayoutConstraint.activate([
-//            popUp.alertView.heightAnchor.constraint(equalToConstant: 200),
-//        ])
-//    }
+
     
-    @objc func handleAgree (){
-        let vc = ActivationViewController()
-        if(isChecked){
-            navigationController?.pushViewController(vc, animated: true)
+    @objc func handleLicenceCheck(){
+        isCheckedLicence = !isCheckedLicence
+        if(isCheckedLicence){
+            lincenceCheckBox.setImage(UIImage(systemName: "checkmark.square.fill"), for: [])
+            lincenceCheckBox.tintColor = .red
+            agreeButton.backgroundColor = isCheckedTerms ? APPThemeColor.buttonBackground : APPThemeColor.disabledButtonBackground
+            agreeButton.setTitleColor( !isCheckedTerms ? APPThemeColor.disabledButtonTitle :APPThemeColor.buttonTitle, for: [])
+            
         }else{
-            handleShowPopUp()
+            lincenceCheckBox.setImage(UIImage(systemName: "square"), for: [])
+            lincenceCheckBox.tintColor = .darkGray
+            agreeButton.backgroundColor = APPThemeColor.disabledButtonBackground
+            agreeButton.setTitleColor(APPThemeColor.disabledButtonTitle, for: [])
         }
         
     }
     
+    @objc func handleTermsCheck(){
+        isCheckedTerms = !isCheckedTerms
+        if(isCheckedTerms){
+            termCheckBox.setImage(UIImage(systemName: "checkmark.square.fill"), for: [])
+            termCheckBox.tintColor = .red
+            agreeButton.backgroundColor = isCheckedLicence ? APPThemeColor.buttonBackground : APPThemeColor.disabledButtonBackground
+            agreeButton.setTitleColor( !isCheckedLicence ? APPThemeColor.disabledButtonTitle :APPThemeColor.buttonTitle, for: [])
+        }else{
+            termCheckBox.setImage(UIImage(systemName: "square"), for: [])
+            termCheckBox.tintColor = .darkGray
+            agreeButton.backgroundColor = APPThemeColor.disabledButtonBackground
+            agreeButton.setTitleColor(APPThemeColor.disabledButtonTitle, for: [])
+        }
+       print("lincenceCheckBox", isCheckedLicence)
+        print("isCheckedTerms", isCheckedTerms)
+    }
     
-    @objc func handleShowPopUp(){
-        popUp.handleShow()
+    @objc func didTapOnnAgreeButton() {
+        if(!isCheckedLicence || !isCheckedTerms){
+            showCloseConfirmPopUp(buttonTitle: .actionAgree, title: "WELCOME_ALERT_TITLE_LABEL".localized(), subTitle: "WELCOME_ALERT_DESCRIPTION_LABEL".localized(), style: .default) {
+            }
+        }else{
+            let vc = ActivationViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func handleContinue(){
+        popUp.dismiss(animated: true)
     }
 
-    @objc func handleOk(){
-        popUp.handleHide()
-    }
-    
-    
 }

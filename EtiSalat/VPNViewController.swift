@@ -12,6 +12,8 @@ class VPNViewController: UIViewController {
     var mainText = UILabel()
     var bodyText = UILabel()
     var installButton = CustomButton(hasBackground: true, title: "I agree", buttonType: .medium)
+    
+    let relativeContrains : CGFloat = 0.060
 
     override func viewDidLoad() {
         super.viewDidLoad()

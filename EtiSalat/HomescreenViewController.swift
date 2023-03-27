@@ -5,145 +5,108 @@
 //  Created by Mahammadsuel C on 3/17/23.
 //
 
-import UIKit
+import TinyConstraints
 
 class HomescreenViewController: UIViewController {
-    var screenImage = UIImageView()
-    var mainText = UILabel()
-    var bodyText = UILabel()
-    var permissionButton = UIButton()
-    var buttonIcon = UIImageView()
-    var buttonTitle = UILabel()
-    var aboutButton = CustomButton(hasBackground: false, title: "About", buttonType: .small )
-    var termsButton = CustomButton(hasBackground: false, title: "Privacy Terms", buttonType: .big )
+    
+    let relativeContrains : CGFloat = 0.060
+    private lazy var screenImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "homeScreenImage")
+        image.width(190)
+        image.height(230)
+        return image
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.text = "HOME_LABEL_TITLE".localized()
+        titleLabel.font = APPFont.title
+        titleLabel.textColor = APPThemeColor.title
+        titleLabel.textAlignment = .center
+        return titleLabel
+    }()
+    
+    private lazy var descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.text = "HOME_LABEL_DISCRIPTION".localized()
+        descriptionLabel.font = APPFont.description
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.textColor = APPThemeColor.description
+        descriptionLabel.textAlignment = .center
+        return descriptionLabel
+    }()
+    
+    private lazy var aboutButton: UIButton = {
+        let aboutButton = UIButton()
+        aboutButton.setTitle("HOME_LABEL_ABOUT_BUTTON_TITLE".localized(), for: .normal)
+        aboutButton.height(40)
+        aboutButton.width(200)
+        aboutButton.setTitleColor(UIColor.black, for: .normal)
+        aboutButton.addTarget(self, action: #selector(handelAbout), for: .touchUpInside)
+        return aboutButton
+    }()
+    
+    private lazy var termsButton: UIButton = {
+        let termsButton = UIButton()
+        termsButton.setTitle("HOME_LABEL_TERMS_BUTTON_TITLE".localized(), for: .normal)
+        termsButton.height(40)
+        termsButton.width(200)
+        termsButton.setTitleColor(UIColor.black, for: .normal)
+        termsButton.addTarget(self, action: #selector(handelTerms), for: .touchUpInside)
+        return termsButton
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
     }
+    
     func configureUI (){
-        configureScreenImage()
-        configureMainText()
-        configureBodyText()
-        configureButton()
-        configureAboutButton()
-        configureTermsButton()
-    }
-    
-    func configureScreenImage (){
-        view.addSubview(screenImage)
-        screenImage.translatesAutoresizingMaskIntoConstraints = false
-        screenImage.image = UIImage(named: "homeScreenImage")
+        let imageHolderView = UIView()
+        imageHolderView.addSubview(screenImage)
+        screenImage.centerInSuperview()
+        imageHolderView.height(300)
         
-        NSLayoutConstraint.activate([
-            screenImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            screenImage.heightAnchor.constraint(equalToConstant: 230),
-            screenImage.widthAnchor.constraint(equalToConstant: 190),
-            screenImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 125)
-        ])
-    }
-    func configureMainText (){
-        view.addSubview(mainText)
-        mainText.translatesAutoresizingMaskIntoConstraints = false
-        mainText.text = "Parental Control"
-        mainText.textAlignment = .center
-        mainText.font = .systemFont(ofSize: 24, weight: .medium)
+        /// set stackview for labels
+        let labelStackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
+        labelStackView.axis = .vertical
+        labelStackView.distribution = .fill
+        labelStackView.alignment = .fill
+        labelStackView.spacing = 20
         
-        NSLayoutConstraint.activate([
-            mainText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            mainText.topAnchor.constraint(equalTo: screenImage.bottomAnchor, constant: 20),
-            mainText.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mainText.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-    
-    func configureBodyText (){
-        view.addSubview(bodyText)
-        bodyText.translatesAutoresizingMaskIntoConstraints = false
-        bodyText.text = "Protecting this device any place any time "
-        bodyText.textAlignment = .center
-        bodyText.font = .systemFont(ofSize: 16, weight: .regular)
-        bodyText.numberOfLines = 0
-
-        NSLayoutConstraint.activate([
-            bodyText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bodyText.topAnchor.constraint(equalTo: mainText.bottomAnchor, constant: 20),
-            bodyText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            bodyText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-        ])
-    }
-    func configureButton (){
-        view.addSubview(permissionButton)
-        permissionButton.translatesAutoresizingMaskIntoConstraints = false
-        permissionButton.addTarget(self, action: #selector(handlePermission), for: .touchUpInside)
-        permissionButton.layer.borderWidth = 1
-        permissionButton.layer.cornerRadius = 20
-    
-        permissionButton.addSubview(buttonTitle)
-        buttonTitle.translatesAutoresizingMaskIntoConstraints = false
-        buttonTitle.text = "Permission Overview"
-        buttonTitle.font = .systemFont(ofSize: 14, weight: .semibold)
+        /// set stackview for image  and labels
+        let imageLabelStackView = UIStackView(arrangedSubviews: [imageHolderView, labelStackView])
+        imageLabelStackView.axis = .vertical
+        imageLabelStackView.distribution = .fill
+        imageLabelStackView.alignment = .fill
+        imageLabelStackView.spacing = 20
         
-        permissionButton.addSubview(buttonIcon)
-        buttonIcon.translatesAutoresizingMaskIntoConstraints = false
-        buttonIcon.image = UIImage(named: "permissionButtonIcon")
+        self.view.addSubview(imageLabelStackView)
+        imageLabelStackView.topToSuperview(offset: 24, usingSafeArea: true)
+        imageLabelStackView.leftToSuperview(offset: 16)
+        imageLabelStackView.rightToSuperview(offset: -16)
         
-        NSLayoutConstraint.activate([
-            permissionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            permissionButton.heightAnchor.constraint(equalToConstant: 40),
-            permissionButton.widthAnchor.constraint(equalToConstant: 220),
-            permissionButton.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 68),
-            
-            buttonTitle.centerYAnchor.constraint(equalTo: permissionButton.centerYAnchor),
-            buttonTitle.leftAnchor.constraint(equalTo: buttonIcon.rightAnchor, constant: 10),
-            
-            buttonIcon.centerYAnchor.constraint(equalTo: permissionButton.centerYAnchor),
-            buttonIcon.leftAnchor.constraint(equalTo: permissionButton.leftAnchor, constant: 16)
-            
-        ])
-    }
-    func configureAboutButton (){
-        view.addSubview(aboutButton)
-        aboutButton.translatesAutoresizingMaskIntoConstraints = false
-        aboutButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
-        let attributedString = NSAttributedString(string: "About", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        aboutButton.setAttributedTitle(attributedString, for: .normal)
         
-        aboutButton.addTarget(self, action: #selector(handelAbout), for: .touchUpInside)
+        let textbuttonStackView = UIStackView(arrangedSubviews:[termsButton, aboutButton])
+        textbuttonStackView.axis = .vertical
+        textbuttonStackView.distribution = .fill
+        textbuttonStackView.alignment = .fill
+        textbuttonStackView.spacing = 10
         
-        NSLayoutConstraint.activate([
-            aboutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            aboutButton.topAnchor.constraint(equalTo: permissionButton.bottomAnchor, constant: 20),
-        ])
+        self.view.addSubview(textbuttonStackView)
+        textbuttonStackView.centerXToSuperview()
+        textbuttonStackView.bottomToSuperview(offset: -100, usingSafeArea: true)
     }
     
-    func configureTermsButton (){
-        view.addSubview(termsButton)
-        termsButton.translatesAutoresizingMaskIntoConstraints = false
-        termsButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
-        let attributedString = NSAttributedString(string: "Privacy Terms", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        termsButton.setAttributedTitle(attributedString, for: .normal)
-        termsButton.addTarget(self, action: #selector(handelTerms), for: .touchUpInside)
-        
-        NSLayoutConstraint.activate([
-            termsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            termsButton.topAnchor.constraint(equalTo: aboutButton.bottomAnchor, constant: 12),
-        ])
-    }
+        @objc func handelAbout(){
+            let vc = AboutApplicationViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     
+        @objc func handelTerms(){
     
-    @objc func handlePermission(){
-        
-    }
-    
-    @objc func handelAbout(){
-    
-    }
-    
-    @objc func handelTerms(){
-    
-    }
-    
-
-
+        }
 }

@@ -1,0 +1,22 @@
+PODS:
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - SwiftMessages
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - SwiftMessages
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 411ca91d3d70fa7d8a8594c13099eaeb56e0c97d
+
+COCOAPODS: 1.12.0

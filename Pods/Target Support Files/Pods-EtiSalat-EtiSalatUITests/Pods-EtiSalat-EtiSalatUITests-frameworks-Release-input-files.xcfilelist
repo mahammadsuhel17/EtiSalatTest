@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework
+${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework

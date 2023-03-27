@@ -5,186 +5,149 @@
 //  Created by Mahammadsuel C on 3/15/23.
 //
 
-import UIKit
+import TinyConstraints
 
 class ActivationViewController: UIViewController {
-    
-    var boldText = UILabel()
-    var bodyText = UILabel()
-    let buttonColor = UIColor(hexString: "#f657gy")
-    var inputField = UITextField()
-    var bottomLine = UIView()
-    var placeholder = UILabel()
-    var textcount = UILabel()
-    var submitButton = CustomButton(hasBackground: true, title: "Submit", buttonType: .medium)
-    var loader = UIActivityIndicatorView()
-    var checkImage = UIImageView()
-    
-    var popUp = PopUp()
-    
+    // key count
     var textCount = 0
     
+    // screen title
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.text = "ACTIVATION_LABEL_TITLE".localized()
+        titleLabel.font = APPFont.title
+        titleLabel.textColor = APPThemeColor.title
+        return titleLabel
+    }()
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "Activate the service"
-        configureUI()
-    }
+    // screen discription
+    private lazy var descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.text = "ACTIVATION_LABEL_DESCRIPTION".localized()
+        descriptionLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.textColor = APPThemeColor.description
+        return descriptionLabel
+    }()
     
-    func configureUI(){
-        configureBoldText()
-        configureBodyText()
-        configureInputField()
-        configureSubmitButoon()
-        configurePopup()
-        configureTextCount()
-//        configureLoader()
-    }
+    // key input placeholder
+    private lazy var placeHolder: UILabel = {
+        let placeHolder = UILabel()
+        placeHolder.text = "ACTIVATION_LABEL_PLACEHOLDER".localized()
+        placeHolder.font = UIFont(name: "Roboto-Bold", size: 12)
+        placeHolder.textColor = .black
+        return placeHolder
+    }()
     
-    func configureBoldText (){
-        view.addSubview(boldText)
-        boldText.text = "Enter the key"
-        boldText.translatesAutoresizingMaskIntoConstraints = false
-        boldText.font = .systemFont(ofSize: 16, weight: .bold)
-        NSLayoutConstraint.activate([
-            boldText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            boldText.topAnchor.constraint(equalTo: view.topAnchor, constant: 96),
-        ])
-    }
-    
-    func configureBodyText (){
-        view.addSubview(bodyText)
-        bodyText.translatesAutoresizingMaskIntoConstraints = false
-        bodyText.text = "The activation key was sent to you. If you cannot find it, please login to the parent portal and go to “Devices”."
-        bodyText.font = .systemFont(ofSize: 14, weight: .regular)
-        bodyText.numberOfLines = 0
-        
-        NSLayoutConstraint.activate([
-            bodyText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bodyText.topAnchor.constraint(equalTo: boldText.bottomAnchor, constant: 16),
-            bodyText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-        ])
-    }
-    
-    func configureInputField(){
-        view.addSubview(inputField)
-        inputField.translatesAutoresizingMaskIntoConstraints = false
+    //key input
+    private lazy var inputField: UITextField = {
+        let inputField = UITextField()
         inputField.backgroundColor = .systemBackground
         inputField.returnKeyType = .done
         inputField.autocorrectionType = .no
         inputField.autocapitalizationType = .none
-        inputField.leftViewMode = .always
-        inputField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: inputField.frame.size.height))
         inputField.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
-        
-        inputField.addSubview(placeholder)
-        placeholder.translatesAutoresizingMaskIntoConstraints = false
-        placeholder.text = "Enter Key"
-        placeholder.font = .systemFont(ofSize:12, weight: .bold)
-        
-        inputField.addSubview(bottomLine)
-        bottomLine.translatesAutoresizingMaskIntoConstraints = false
+        return inputField
+    }()
+    
+   // bottom line
+    private lazy var bottomLine: UIView = {
+        let bottomLine = UIView()
         bottomLine.backgroundColor = .black
-        
-        inputField.addSubview(loader)
-        loader.translatesAutoresizingMaskIntoConstraints = false
-        loader.stopAnimating()
-        
-        inputField.addSubview(checkImage)
-        checkImage.translatesAutoresizingMaskIntoConstraints = false
-        checkImage.tintColor = .red
-        checkImage.image = UIImage(systemName: "checkmark")
-        checkImage.isHidden = true
-        
-        
-        
-        NSLayoutConstraint.activate([
-            inputField.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 12),
-            inputField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            inputField.heightAnchor.constraint(equalToConstant: 65),
-            inputField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-            
-            placeholder.leadingAnchor.constraint(equalTo: inputField.leadingAnchor),
-            placeholder.topAnchor.constraint(equalTo: inputField.topAnchor, constant: 0),
-
-            
-            bottomLine.heightAnchor.constraint(equalToConstant: 1),
-            bottomLine.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            bottomLine.topAnchor.constraint(equalTo: inputField.bottomAnchor, constant: -10),
-            bottomLine.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-            
-            loader.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-            loader.centerYAnchor.constraint(equalTo: inputField.centerYAnchor),
-            
-            checkImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-            checkImage.centerYAnchor.constraint(equalTo: inputField.centerYAnchor)
-            
-        ])
-    }
+        bottomLine.height(1)
+        return bottomLine
+    }()
     
-    func configureTextCount (){
-        view.addSubview(textcount)
-        textcount.translatesAutoresizingMaskIntoConstraints = false
-        textcount.text = "\(textCount)/9"
+    // text count lable
+    private lazy var textCountLableView: UILabel = {
+        let textCountLableView = UILabel()
+        textCountLableView.text = "\(textCount)/9"
+        textCountLableView.font = UIFont(name: "Roboto-Bold", size: 12)
+        textCountLableView.textColor = .black
+        return textCountLableView
+    }()
     
-        
-        NSLayoutConstraint.activate([
-            textcount.topAnchor.constraint(equalTo: bottomLine.bottomAnchor, constant: 5),
-            textcount.rightAnchor.constraint(equalTo: view.rightAnchor, constant:  -16),
-        ])
-    }
     
-    func configureSubmitButoon (){
-        view.addSubview(submitButton)
-        submitButton.translatesAutoresizingMaskIntoConstraints = false
+    // submit button
+    private lazy var submitButton: CustomButton = {
+        let submitButton = CustomButton(hasBackground: true, title: "Submit", buttonType: .medium)
+        submitButton.backgroundColor = APPThemeColor.disabledButtonBackground
+        submitButton.setTitleColor(APPThemeColor.disabledButtonTitle, for: [])
+        submitButton.isUserInteractionEnabled = false
         submitButton.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
-        submitButton.isUserInteractionEnabled = textCount >= 9 ? true : false
-        submitButton.backgroundColor = !submitButton.isUserInteractionEnabled ? .lightGray : .red
-        NSLayoutConstraint.activate([
-            submitButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            submitButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-        ])
+        return submitButton
+    }()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        navigationItem.hidesBackButton = true
+        configureUI()
     }
     
-    func configurePopup(){
-        view.addSubview(popUp)
-        popUp.buttonview1.addTarget(self, action: #selector(handleOk), for: .touchUpInside)
+    func configureUI(){
         
-        NSLayoutConstraint.activate([
-            popUp.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            popUp.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            popUp.heightAnchor.constraint(equalTo: view.heightAnchor),
-            popUp.widthAnchor.constraint(equalTo: view.widthAnchor)
-        ])
-    }
-
-    
-    @objc func handleTextChange (){
-        textCount = inputField.text?.count ?? 0
-        configureSubmitButoon()
-        if(textCount == 9){
-            loader.startAnimating()
-        }else{
-            loader.stopAnimating()
-        }
-        if(textCount != 9){
-            checkImage.isHidden = true
-        }
-        if(textCount <= 9){
-            textcount.text = "\(textCount)/9"
-        }
-    }
-    
-    @objc func handleSubmit(){
-            loader.stopAnimating()
-            checkImage.isHidden = false
+        // title and discription stack
+        let titleAndDiscriptionStack = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
+        titleAndDiscriptionStack.axis = .vertical
+        titleAndDiscriptionStack.alignment = .fill
+        titleAndDiscriptionStack.distribution = .fill
+        titleAndDiscriptionStack.spacing = 60
         
+        self.view.addSubview(titleAndDiscriptionStack)
+        titleAndDiscriptionStack.topToSuperview(offset: 34, usingSafeArea: true)
+        titleAndDiscriptionStack.leftToSuperview(offset: 16)
+        titleAndDiscriptionStack.rightToSuperview(offset: -16)
+        
+        
+        // placeholder and input field stack
+        let keyinputView = UIStackView(arrangedSubviews: [placeHolder, inputField])
+        keyinputView.axis = .vertical
+        keyinputView.alignment = .fill
+        keyinputView.distribution = .fill
+        keyinputView.spacing = 10
+        
+        self.view.addSubview(keyinputView)
+        keyinputView.topToBottom(of:titleAndDiscriptionStack, offset: 50)
+        keyinputView.leftToSuperview(offset: 16)
+        keyinputView.rightToSuperview(offset: -16)
+        
+        
+        // input bottom line
+        self.view.addSubview(bottomLine)
+        bottomLine.topToBottom(of:keyinputView, offset: 10)
+        bottomLine.leftToSuperview(offset: 16)
+        bottomLine.rightToSuperview(offset: -16)
+        
+        self.view.addSubview(textCountLableView)
+        textCountLableView.topToBottom(of: bottomLine, offset: 12)
+        textCountLableView.right(to: bottomLine)
+        
+        self.view.addSubview(submitButton)
+        submitButton.bottomToSuperview(offset:-200, usingSafeArea: true)
+        submitButton.centerXToSuperview()
     }
     
-    @objc func handleOk(){
-        popUp.handleHide()
-    }
+    // function to handle the input value change
+        @objc func handleTextChange (){
+            textCount = inputField.text?.count ?? 0
+            textCountLableView.text = "\(textCount)/9"
+            if(textCount == 9){
+                submitButton.backgroundColor =  APPThemeColor.buttonBackground
+                submitButton.setTitleColor(APPThemeColor.buttonTitle, for: [])
+                submitButton.isUserInteractionEnabled = true
+            }else{
+                submitButton.backgroundColor = APPThemeColor.disabledButtonBackground
+                submitButton.setTitleColor(APPThemeColor.disabledButtonTitle, for: [])
+                submitButton.isUserInteractionEnabled = false
+            }
+            print(textCount)
+        }
     
+    // function to handle submit button
+        @objc func handleSubmit(){
+            let vc = HomescreenViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
 }

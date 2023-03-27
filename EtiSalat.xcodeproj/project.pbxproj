@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DF8997FB8CAC8AF324E468C /* Pods_EtiSalatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F79AFDB07C9E18C9890F92 /* Pods_EtiSalatTests.framework */; };
+		2C1A68470C3AF9C4AC7F1B6F /* Pods_EtiSalat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5B6375AC1D93ABEF45F079 /* Pods_EtiSalat.framework */; };
+		2E7DE4401A40DF07AAFC8A6C /* Pods_EtiSalat_EtiSalatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8866FF8DCA609F6002EF7C7 /* Pods_EtiSalat_EtiSalatUITests.framework */; };
 		F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FA29C077EF00D73B09 /* AppDelegate.swift */; };
 		F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FC29C077EF00D73B09 /* SceneDelegate.swift */; };
 		F5124A0429C077F100D73B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5124A0329C077F100D73B09 /* Assets.xcassets */; };
@@ -21,13 +24,32 @@
 		F539C2BD29C43BA700F3C6F6 /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */; };
 		F539C2BF29C4427700F3C6F6 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */; };
 		F539C2C129C45EF400F3C6F6 /* AboutApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */; };
-		F539C2C329C46FD800F3C6F6 /* AboutAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */; };
 		F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */; };
 		F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */; };
 		F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */; };
 		F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */; };
 		F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */; };
 		F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AE29C1DB1A00C92BFD /* PopUp.swift */; };
+		F548159D29CC2FB5002F2027 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159129CC2FB4002F2027 /* Roboto-Regular.ttf */; };
+		F548159E29CC2FB5002F2027 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159229CC2FB4002F2027 /* Roboto-Bold.ttf */; };
+		F548159F29CC2FB5002F2027 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159329CC2FB4002F2027 /* Roboto-Italic.ttf */; };
+		F54815A029CC2FB5002F2027 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159429CC2FB4002F2027 /* Roboto-Black.ttf */; };
+		F54815A129CC2FB5002F2027 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159529CC2FB4002F2027 /* Roboto-Thin.ttf */; };
+		F54815A229CC2FB5002F2027 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159629CC2FB4002F2027 /* Roboto-MediumItalic.ttf */; };
+		F54815A329CC2FB5002F2027 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159729CC2FB4002F2027 /* Roboto-BlackItalic.ttf */; };
+		F54815A429CC2FB5002F2027 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159829CC2FB4002F2027 /* Roboto-BoldItalic.ttf */; };
+		F54815A529CC2FB5002F2027 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159929CC2FB4002F2027 /* Roboto-Medium.ttf */; };
+		F54815A629CC2FB5002F2027 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159A29CC2FB5002F2027 /* Roboto-ThinItalic.ttf */; };
+		F54815A729CC2FB5002F2027 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159B29CC2FB5002F2027 /* Roboto-LightItalic.ttf */; };
+		F54815A829CC2FB5002F2027 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159C29CC2FB5002F2027 /* Roboto-Light.ttf */; };
+		F55AFCAF29D162C400944D33 /* UIColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCAE29D162C400944D33 /* UIColorManager.swift */; };
+		F55AFCC229D1659000944D33 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC129D1659000944D33 /* AlertView.swift */; };
+		F55AFCC429D1668F00944D33 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC329D1668F00944D33 /* Config.swift */; };
+		F55AFCC629D1673D00944D33 /* FileUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */; };
+		F55AFCC729D167CE00944D33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55AFCC929D167CE00944D33 /* Localizable.strings */; };
+		F55AFCCC29D1694700944D33 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCCB29D1694700944D33 /* StringExtensions.swift */; };
+		F55AFCCE29D1792C00944D33 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */; };
+		F561C0EB29CC8892007D0B76 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561C0EA29CC8892007D0B76 /* TestViewController.swift */; };
 		F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1491B29C30772006BA693 /* UIcolors.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BAC82FDC0E8347B8A1F2E56 /* Pods-EtiSalat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalat.debug.xcconfig"; path = "Target Support Files/Pods-EtiSalat/Pods-EtiSalat.debug.xcconfig"; sourceTree = "<group>"; };
+		52FFF6ED7876344C27C87070 /* Pods-EtiSalatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalatTests.debug.xcconfig"; path = "Target Support Files/Pods-EtiSalatTests/Pods-EtiSalatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76F79AFDB07C9E18C9890F92 /* Pods_EtiSalatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtiSalatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5B6375AC1D93ABEF45F079 /* Pods_EtiSalat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtiSalat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBC751FDB398E31BD85B68A /* Pods-EtiSalat-EtiSalatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalat-EtiSalatUITests.release.xcconfig"; path = "Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A901A21685C743E0E290A0A8 /* Pods-EtiSalat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalat.release.xcconfig"; path = "Target Support Files/Pods-EtiSalat/Pods-EtiSalat.release.xcconfig"; sourceTree = "<group>"; };
+		B94590F8C8E89DB6B49EB8E3 /* Pods-EtiSalat-EtiSalatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalat-EtiSalatUITests.debug.xcconfig"; path = "Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8866FF8DCA609F6002EF7C7 /* Pods_EtiSalat_EtiSalatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtiSalat_EtiSalatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB8ED7D95E6E330D6F5E81A /* Pods-EtiSalatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalatTests.release.xcconfig"; path = "Target Support Files/Pods-EtiSalatTests/Pods-EtiSalatTests.release.xcconfig"; sourceTree = "<group>"; };
 		F51249F729C077EF00D73B09 /* EtiSalat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtiSalat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51249FA29C077EF00D73B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F51249FC29C077EF00D73B09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,13 +98,33 @@
 		F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
 		F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
 		F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApplicationViewController.swift; sourceTree = "<group>"; };
-		F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppData.swift; sourceTree = "<group>"; };
 		F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
 		F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNViewController.swift; sourceTree = "<group>"; };
 		F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewController.swift; sourceTree = "<group>"; };
 		F540D3AE29C1DB1A00C92BFD /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		F548159129CC2FB4002F2027 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F548159229CC2FB4002F2027 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F548159329CC2FB4002F2027 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		F548159429CC2FB4002F2027 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		F548159529CC2FB4002F2027 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		F548159629CC2FB4002F2027 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F548159729CC2FB4002F2027 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F548159829CC2FB4002F2027 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F548159929CC2FB4002F2027 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F548159A29CC2FB5002F2027 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F548159B29CC2FB5002F2027 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		F548159C29CC2FB5002F2027 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F55AFCAE29D162C400944D33 /* UIColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorManager.swift; sourceTree = "<group>"; };
+		F55AFCC129D1659000944D33 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		F55AFCC329D1668F00944D33 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F55AFCC829D167CE00944D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F55AFCCA29D167E100944D33 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F55AFCCB29D1694700944D33 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		F561C0EA29CC8892007D0B76 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F5D1491B29C30772006BA693 /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1A68470C3AF9C4AC7F1B6F /* Pods_EtiSalat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF8997FB8CAC8AF324E468C /* Pods_EtiSalatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +149,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7DE4401A40DF07AAFC8A6C /* Pods_EtiSalat_EtiSalatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5727C07B580ECB40F54CE6D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BAC82FDC0E8347B8A1F2E56 /* Pods-EtiSalat.debug.xcconfig */,
+				A901A21685C743E0E290A0A8 /* Pods-EtiSalat.release.xcconfig */,
+				B94590F8C8E89DB6B49EB8E3 /* Pods-EtiSalat-EtiSalatUITests.debug.xcconfig */,
+				9DBC751FDB398E31BD85B68A /* Pods-EtiSalat-EtiSalatUITests.release.xcconfig */,
+				52FFF6ED7876344C27C87070 /* Pods-EtiSalatTests.debug.xcconfig */,
+				EAB8ED7D95E6E330D6F5E81A /* Pods-EtiSalatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F2788377DEB9B4C25066AC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B6375AC1D93ABEF45F079 /* Pods_EtiSalat.framework */,
+				C8866FF8DCA609F6002EF7C7 /* Pods_EtiSalat_EtiSalatUITests.framework */,
+				76F79AFDB07C9E18C9890F92 /* Pods_EtiSalatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F51249EE29C077EF00D73B09 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +186,8 @@
 				F5124A1029C077F100D73B09 /* EtiSalatTests */,
 				F5124A1A29C077F100D73B09 /* EtiSalatUITests */,
 				F51249F829C077EF00D73B09 /* Products */,
+				5727C07B580ECB40F54CE6D9 /* Pods */,
+				8F2788377DEB9B4C25066AC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +204,7 @@
 		F51249F929C077EF00D73B09 /* EtiSalat */ = {
 			isa = PBXGroup;
 			children = (
+				F55AFCAB29D1617C00944D33 /* LaunchScreen */,
 				F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */,
 				F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */,
 				F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */,
@@ -133,11 +213,13 @@
 				F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */,
 				F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */,
 				F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */,
-				F5D1491A29C30756006BA693 /* Extensions */,
-				F5124A2E29C087EB00D73B09 /* Views */,
+				F561C0EA29CC8892007D0B76 /* TestViewController.swift */,
+				F51249FA29C077EF00D73B09 /* AppDelegate.swift */,
+				F51249FC29C077EF00D73B09 /* SceneDelegate.swift */,
+				F5124A0329C077F100D73B09 /* Assets.xcassets */,
 				F5124A2F29C087F800D73B09 /* supportings */,
-				F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */,
 				F5124A0829C077F100D73B09 /* Info.plist */,
+				F55AFCC929D167CE00944D33 /* Localizable.strings */,
 			);
 			path = EtiSalat;
 			sourceTree = "<group>";
@@ -167,6 +249,7 @@
 				F540D3AE29C1DB1A00C92BFD /* PopUp.swift */,
 				F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */,
 				F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */,
+				F55AFCC129D1659000944D33 /* AlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,18 +257,73 @@
 		F5124A2F29C087F800D73B09 /* supportings */ = {
 			isa = PBXGroup;
 			children = (
-				F51249FC29C077EF00D73B09 /* SceneDelegate.swift */,
-				F51249FA29C077EF00D73B09 /* AppDelegate.swift */,
-				F5124A0329C077F100D73B09 /* Assets.xcassets */,
+				F55AFCB029D162FA00944D33 /* Configurations */,
+				F55AFCAD29D162A900944D33 /* Managers */,
+				F5D1491A29C30756006BA693 /* Extensions */,
+				F55AFCAC29D1622500944D33 /* Assets */,
+				F5124A2E29C087EB00D73B09 /* Views */,
+				F548157829CC2ECC002F2027 /* Fonts */,
 			);
 			path = supportings;
+			sourceTree = "<group>";
+		};
+		F548157829CC2ECC002F2027 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F548159429CC2FB4002F2027 /* Roboto-Black.ttf */,
+				F548159729CC2FB4002F2027 /* Roboto-BlackItalic.ttf */,
+				F548159229CC2FB4002F2027 /* Roboto-Bold.ttf */,
+				F548159829CC2FB4002F2027 /* Roboto-BoldItalic.ttf */,
+				F548159329CC2FB4002F2027 /* Roboto-Italic.ttf */,
+				F548159C29CC2FB5002F2027 /* Roboto-Light.ttf */,
+				F548159B29CC2FB5002F2027 /* Roboto-LightItalic.ttf */,
+				F548159929CC2FB4002F2027 /* Roboto-Medium.ttf */,
+				F548159629CC2FB4002F2027 /* Roboto-MediumItalic.ttf */,
+				F548159129CC2FB4002F2027 /* Roboto-Regular.ttf */,
+				F548159529CC2FB4002F2027 /* Roboto-Thin.ttf */,
+				F548159A29CC2FB5002F2027 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F55AFCAB29D1617C00944D33 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5124A0529C077F100D73B09 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		F55AFCAC29D1622500944D33 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F55AFCAD29D162A900944D33 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F55AFCAE29D162C400944D33 /* UIColorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F55AFCB029D162FA00944D33 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F55AFCC329D1668F00944D33 /* Config.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		F5D1491A29C30756006BA693 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F5D1491B29C30772006BA693 /* UIcolors.swift */,
-				F539C2C229C46FD800F3C6F6 /* AboutAppData.swift */,
+				F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */,
+				F55AFCCB29D1694700944D33 /* StringExtensions.swift */,
+				F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,9 +335,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5124A2129C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalat" */;
 			buildPhases = (
+				4E911006AB4948D89CA1A980 /* [CP] Check Pods Manifest.lock */,
 				F51249F329C077EF00D73B09 /* Sources */,
 				F51249F429C077EF00D73B09 /* Frameworks */,
 				F51249F529C077EF00D73B09 /* Resources */,
+				A92EA73766B9F477856BDB38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +354,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5124A2429C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatTests" */;
 			buildPhases = (
+				F6CA60E2FA65722F4F839661 /* [CP] Check Pods Manifest.lock */,
 				F5124A0929C077F100D73B09 /* Sources */,
 				F5124A0A29C077F100D73B09 /* Frameworks */,
 				F5124A0B29C077F100D73B09 /* Resources */,
@@ -232,9 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5124A2729C077F100D73B09 /* Build configuration list for PBXNativeTarget "EtiSalatUITests" */;
 			buildPhases = (
+				1A96052DF50EDFDB418133B9 /* [CP] Check Pods Manifest.lock */,
 				F5124A1329C077F100D73B09 /* Sources */,
 				F5124A1429C077F100D73B09 /* Frameworks */,
 				F5124A1529C077F100D73B09 /* Resources */,
+				7AAEF48A434E1753B13B2427 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +419,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = F51249EE29C077EF00D73B09;
 			productRefGroup = F51249F829C077EF00D73B09 /* Products */;
@@ -294,8 +438,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54815A629CC2FB5002F2027 /* Roboto-ThinItalic.ttf in Resources */,
+				F54815A129CC2FB5002F2027 /* Roboto-Thin.ttf in Resources */,
+				F548159D29CC2FB5002F2027 /* Roboto-Regular.ttf in Resources */,
 				F5124A0729C077F100D73B09 /* LaunchScreen.storyboard in Resources */,
+				F54815A829CC2FB5002F2027 /* Roboto-Light.ttf in Resources */,
+				F54815A729CC2FB5002F2027 /* Roboto-LightItalic.ttf in Resources */,
+				F548159F29CC2FB5002F2027 /* Roboto-Italic.ttf in Resources */,
+				F54815A329CC2FB5002F2027 /* Roboto-BlackItalic.ttf in Resources */,
+				F54815A229CC2FB5002F2027 /* Roboto-MediumItalic.ttf in Resources */,
+				F548159E29CC2FB5002F2027 /* Roboto-Bold.ttf in Resources */,
+				F55AFCC729D167CE00944D33 /* Localizable.strings in Resources */,
 				F5124A0429C077F100D73B09 /* Assets.xcassets in Resources */,
+				F54815A529CC2FB5002F2027 /* Roboto-Medium.ttf in Resources */,
+				F54815A429CC2FB5002F2027 /* Roboto-BoldItalic.ttf in Resources */,
+				F54815A029CC2FB5002F2027 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,27 +472,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A96052DF50EDFDB418133B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EtiSalat-EtiSalatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E911006AB4948D89CA1A980 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EtiSalat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AAEF48A434E1753B13B2427 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92EA73766B9F477856BDB38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EtiSalat/Pods-EtiSalat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EtiSalat/Pods-EtiSalat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EtiSalat/Pods-EtiSalat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6CA60E2FA65722F4F839661 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EtiSalatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F51249F329C077EF00D73B09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */,
+				F55AFCC229D1659000944D33 /* AlertView.swift in Sources */,
 				F539C2BF29C4427700F3C6F6 /* HomescreenViewController.swift in Sources */,
+				F55AFCCE29D1792C00944D33 /* UILabelExtension.swift in Sources */,
 				F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */,
 				F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */,
 				F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */,
+				F55AFCCC29D1694700944D33 /* StringExtensions.swift in Sources */,
 				F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */,
 				F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */,
 				F539C2C129C45EF400F3C6F6 /* AboutApplicationViewController.swift in Sources */,
 				F539C2BD29C43BA700F3C6F6 /* popUpViewController.swift in Sources */,
 				F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */,
 				F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */,
-				F539C2C329C46FD800F3C6F6 /* AboutAppData.swift in Sources */,
 				F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */,
 				F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */,
+				F55AFCC629D1673D00944D33 /* FileUIViewControllerExtension.swift in Sources */,
+				F55AFCAF29D162C400944D33 /* UIColorManager.swift in Sources */,
 				F5124A2B29C0783A00D73B09 /* SplashScreenViewController.swift in Sources */,
 				F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */,
+				F55AFCC429D1668F00944D33 /* Config.swift in Sources */,
+				F561C0EB29CC8892007D0B76 /* TestViewController.swift in Sources */,
 				F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +647,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F55AFCC929D167CE00944D33 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55AFCC829D167CE00944D33 /* en */,
+				F55AFCCA29D167E100944D33 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -388,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -448,6 +724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -500,6 +777,7 @@
 		};
 		F5124A2229C077F100D73B09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BAC82FDC0E8347B8A1F2E56 /* Pods-EtiSalat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -528,6 +806,7 @@
 		};
 		F5124A2329C077F100D73B09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A901A21685C743E0E290A0A8 /* Pods-EtiSalat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +835,7 @@
 		};
 		F5124A2529C077F100D73B09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FFF6ED7876344C27C87070 /* Pods-EtiSalatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +856,7 @@
 		};
 		F5124A2629C077F100D73B09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB8ED7D95E6E330D6F5E81A /* Pods-EtiSalatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +877,7 @@
 		};
 		F5124A2829C077F100D73B09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94590F8C8E89DB6B49EB8E3 /* Pods-EtiSalat-EtiSalatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -614,6 +896,7 @@
 		};
 		F5124A2929C077F100D73B09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBC751FDB398E31BD85B68A /* Pods-EtiSalat-EtiSalatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
