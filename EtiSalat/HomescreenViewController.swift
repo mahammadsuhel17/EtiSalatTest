@@ -90,7 +90,7 @@ class HomescreenViewController: UIViewController {
         imageLabelStackView.rightToSuperview(offset: -16)
         
         
-        let textbuttonStackView = UIStackView(arrangedSubviews:[termsButton, aboutButton])
+        let textbuttonStackView = UIStackView(arrangedSubviews:[aboutButton, termsButton])
         textbuttonStackView.axis = .vertical
         textbuttonStackView.distribution = .fill
         textbuttonStackView.alignment = .fill

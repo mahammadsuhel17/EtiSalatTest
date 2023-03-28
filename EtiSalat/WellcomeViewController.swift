@@ -14,12 +14,13 @@ class WellcomeViewController: UIViewController {
     var termsText = UILabel()
     var text = UILabel()
     
+    
     // screen image
     private lazy var screenImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "WelcomeScreenImage")
-        image.width(230)
-        image.height(230)
+//        image.width(230)
+//        image.height(230)
         return image
     }()
     
@@ -106,18 +107,25 @@ class WellcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
         navigationItem.title = ""
         configureUI()
     }
     
     func configureUI (){
-        
+        let screenSize: CGRect = UIScreen.main.bounds
+        _ = screenSize.width
+        let screenHeight = screenSize.height
         ///  set view for imageview
         let imageHolderView = UIView()
+        self.view.addSubview(imageHolderView)
         imageHolderView.addSubview(screenImage)
-        screenImage.centerInSuperview()
-        imageHolderView.height(300)
+        screenImage.centerXToSuperview()
+        screenImage.bottom(to: imageHolderView)
+        imageHolderView.leftToSuperview(offset: 65)
+        imageHolderView.rightToSuperview(offset: -65)
+        imageHolderView.height(CGFloat(screenHeight/2))
         
         /// set stackview for labels
         let labelStackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
@@ -134,7 +142,7 @@ class WellcomeViewController: UIViewController {
         imageLabelStackView.spacing = 20
         
         self.view.addSubview(imageLabelStackView)
-        imageLabelStackView.topToSuperview(offset: 24, usingSafeArea: true)
+//        imageLabelStackView.topToSuperview(offset: 24, usingSafeArea: true)
         imageLabelStackView.leftToSuperview(offset: 16)
         imageLabelStackView.rightToSuperview(offset: -16)
         

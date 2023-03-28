@@ -25,7 +25,23 @@
 
 "HOME_LABEL_TITLE" = "Etisalat child secure app";
 "HOME_LABEL_DISCRIPTION" = "Protecting this device any place any time";
-"HOME_LABEL_TERMS_BUTTON_TITLE" = "About";
-"HOME_LABEL_ABOUT_BUTTON_TITLE" = "Privacy Terms";
+"HOME_LABEL_TERMS_BUTTON_TITLE" = "Privacy Terms";
+"HOME_LABEL_ABOUT_BUTTON_TITLE" = "About";
 
+// VPN Screen
 
+"VPN_LABEL_TITLE" = "VPN Profile";
+"VPN_LABEL_DISCRIPTION" = "Parental Control uses a VPN connection to keep your family safe from harmful websites. Please install the VPN profile in the next screens. When the VPN is running you will see a VPN icon on the device status bar.";
+"VPN_LABEL_BUTTON_TITLE" = "Install";
+
+//Success screen
+
+"SUCCESS_LABEL_TITLE" = "Congratulations, you made it!";
+"SUCCESS_LABEL_DISCRIPTION" = "This device is now protected";
+"SUCCESS_BUTTON_TITLE" = "Done";
+
+//About the appliction
+
+"ABOUT_LABEL_TITLE" = "About the Application";
+"ABOUT_LABEL_SUB_TITLE" = "This information might be needed when you contact support.";
+"ABOUT_LABEL_CUSTOMER_SUPPORT" = "Customer Support";

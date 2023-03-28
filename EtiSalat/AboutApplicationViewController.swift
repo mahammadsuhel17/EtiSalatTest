@@ -19,8 +19,8 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
         data(title: "SDK Version number", subTitle: "Keepers SDK version"),
         data(title: "App version", subTitle: "7.1.0.6.9"),
         data(title: "Phone Model (manufacturer)", subTitle: "9.1.0.255"),
-        data(title: "Android/iOS version", subTitle: "9.1.0"),
-        data(title: "Android API Level", subTitle: "17778.99"),
+        data(title: "iOS version", subTitle: "9.1.0"),
+        data(title: "iOS API Level", subTitle: "17778.99"),
         data(title: "Product name", subTitle: "Product name"),
         data(title: "Copy-right notice", subTitle: "Copyright@2023"),
         data(title:"Device_Id", subTitle:"9.1.0.235"),
@@ -33,7 +33,7 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
     
     private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "This information might be needed when you contact support."
+        titleLabel.text = "ABOUT_LABEL_SUB_TITLE".localized()
         titleLabel.font = UIFont(name: "Roboto-Regular", size: 14)
         titleLabel.textColor = .black
         titleLabel.textAlignment = .left
@@ -50,11 +50,31 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
         return tableView
     }()
     
+    private lazy var supportButton: UIButton = {
+        let supportButton = UIButton()
+        supportButton.setTitle("ABOUT_LABEL_CUSTOMER_SUPPORT".localized(), for: .normal)
+        supportButton.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 14)
+        supportButton.height(40)
+        supportButton.width(200)
+        supportButton.setTitleColor(UIColor.black, for: .normal)
+        supportButton.addTarget(self, action: #selector(handelSupprt), for: .touchUpInside)
+        return supportButton
+    }()
+    
+    private lazy var bottomLine: UIView = {
+        let bottomLine = UIView()
+        bottomLine.height(1)
+        bottomLine.backgroundColor = .black
+        return bottomLine
+    }()
+    
     private lazy var logoView: UIImageView = {
         let logoView = UIImageView()
         logoView.image = UIImage(named: "logo")
         return logoView
     }()
+    
+    
     
     private lazy var bottomText: UILabel = {
         let bottomText = UILabel()
@@ -70,7 +90,7 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.title = "About the Application"
+        navigationItem.title = "ABOUT_LABEL_TITLE".localized()
         configureUI()
     }
     
@@ -81,6 +101,14 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
         
         configureTableView()
         
+        self.view.addSubview(supportButton)
+        supportButton.topToBottom(of:tableView, offset: -30 )
+        supportButton.centerXToSuperview()
+        supportButton.addSubview(bottomLine)
+        bottomLine.topToBottom(of: supportButton, offset: -12)
+        bottomLine.width(120)
+        bottomLine.centerXToSuperview()
+        
         let bottomView = UIStackView(arrangedSubviews: [logoView, bottomText])
         bottomView.axis = .vertical
         bottomView.distribution = .fill
@@ -89,7 +117,7 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
         
         self.view.addSubview(bottomView)
         bottomView.width(150)
-        bottomView.bottomToSuperview(offset: -16, usingSafeArea: true)
+        bottomView.topToBottom(of: supportButton ,offset: 45)
         bottomView.centerXToSuperview()
     }
     
@@ -109,18 +137,24 @@ class AboutApplicationViewController: UIViewController, UITableViewDelegate, UIT
             ])
 
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return tableData.count
+        }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
             let tableText = tableData[indexPath.row]
             cell.tableTitle.text = tableText.title
             cell.tableSubTitle.text = tableText.subTitle
             return cell
         }
+    
+        @objc func handelSupprt(){
+
+        }
     }
+
+
 
 
     

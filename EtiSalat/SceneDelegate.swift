@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let vc = ActivationViewController()
+        let vc = WellcomeViewController()
         let nav = UINavigationController(rootViewController: vc)
         
         nav.modalPresentationStyle = .fullScreen
