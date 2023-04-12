@@ -1,10 +1,11 @@
 //
 //  AlertView.swift
-//  EtiSalat
+//  Allot
 //
-//  Created by Mahammadsuel C on 3/27/23.
+//  Created by Mani Deepika J M on 3/27/23.
 //
 
+import Foundation
 import Foundation
 import UIKit
 import SwiftMessages
@@ -37,7 +38,7 @@ enum AlertActions {
     case actionYes
     case actionNo
     case actionOk
-    case actionAgree
+    case actionCotinue
 
     var text : String {
         switch self {
@@ -47,8 +48,8 @@ enum AlertActions {
             return "ALERT_NO"
         case .actionOk:
             return "OK"
-        case .actionAgree:
-            return "WELCOME_BUTTON_TITLE"
+        case .actionCotinue:
+            return "PopUpButtonTitle_Continue"
         }
     }
 }
@@ -67,8 +68,10 @@ struct AlertAction {
 
 private class AlertButton: UIButton {
     var callback: (() -> Void)?
-    
 }
+
+
+/// Custom alert view
 
 class AlertView: UIView {
     private var config = SwiftMessages.Config()
@@ -134,14 +137,13 @@ class AlertView: UIView {
         titleLabel.font = APPFont.alertTitle
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.numberOfLines = 0
-//        titleLabel.letterSpace = 0.2
+        titleLabel.letterSpace = 0.2
 
         let formattedString = message.trimmingCharacters(in: .whitespacesAndNewlines)
         let attributedString = NSMutableAttributedString(string: formattedString)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = AlertConstants.lineSpacing
-        paragraphStyle.alignment = .left
-
+        
         // *** Apply attribute to string ***
 
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle,range: NSRange(location: 0, length: message.count))
@@ -153,15 +155,15 @@ class AlertView: UIView {
         titleLabel.edgesToSuperview()
 
         contentView.addSubview(titleView)
-        titleView.leftToSuperview(offset: AlertConstants.messageHorizontalOffset)
-        titleView.rightToSuperview(offset: -AlertConstants.messageHorizontalOffset)
+        titleView.leading(to: contentView, offset: AlertConstants.messageHorizontalOffset)
+        titleView.trailing(to: contentView, offset: -AlertConstants.messageHorizontalOffset)
         titleView.topToSuperview(offset: AlertConstants.messageHorizontalOffset)
 
     }
     
     private func setDescLabel(_ desc: String) {
         descLabel.textAlignment = .center
-        descLabel.textColor = APPThemeColor.description
+        descLabel.textColor = APPThemeColor.title
         descLabel.font = APPFont.extraSmall
         descLabel.adjustsFontSizeToFitWidth = true
         descLabel.numberOfLines = 0
@@ -170,20 +172,19 @@ class AlertView: UIView {
         let attributedString = NSMutableAttributedString(string: formattedString)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = AlertConstants.lineSpacing
-        paragraphStyle.alignment = .left
-
+        
         // *** Apply attribute to string ***
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: desc.count))
 
         // *** Set Attributed String to your label ***
         descLabel.attributedText = attributedString
-//        descLabel.letterSpace = 0.2
+        descLabel.letterSpace = 0.2
         descView.addSubview(descLabel)
         descLabel.edgesToSuperview()
         
         contentView.addSubview(descView)
-        descView.leftToSuperview(offset: AlertConstants.messageHorizontalOffset)
-        descView.rightToSuperview(offset: -AlertConstants.messageHorizontalOffset)
+        descLabel.leading(to: contentView, offset: AlertConstants.messageHorizontalOffset)
+        descLabel.trailing(to: contentView, offset: -AlertConstants.messageHorizontalOffset)
         descView.topToBottom(of: titleView, offset: 16)
 
         let offset = AlertConstants.messageHorizontalOffset
@@ -208,8 +209,8 @@ class AlertView: UIView {
                 actionButton.backgroundColor = APPThemeColor.alertButtonBG
                 actionButton.setTitleColor(APPThemeColor.buttonBackground, for: .normal)
             case .default:
-                actionButton.backgroundColor = APPThemeColor.buttonBackground
-                actionButton.setTitleColor(.white, for: .normal)
+                actionButton.backgroundColor = .white
+                actionButton.setTitleColor(APPThemeColor.title, for: .normal)
             case .destructive:
                 actionButton.backgroundColor = .lightGray
                 actionButton.setTitleColor(.red, for: .normal)
@@ -230,7 +231,7 @@ class AlertView: UIView {
         contentView.addSubview(stackView)
         stackView.height(AlertConstants.actionButtonSize.height)
         //stackView.leftToSuperview(offset:  AlertConstants.messageHorizontalOffset)
-        stackView.rightToSuperview(offset: -AlertConstants.messageHorizontalOffset)
+        stackView.trailing(to: contentView, offset: -AlertConstants.messageHorizontalOffset)
         stackView.bottomToSuperview(offset: -AlertConstants.messageHorizontalOffset)
     }
     
@@ -262,4 +263,3 @@ class AlertView: UIView {
     }
     
 }
-

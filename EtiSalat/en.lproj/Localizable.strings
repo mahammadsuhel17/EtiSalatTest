@@ -5,40 +5,47 @@
   Created by Mahammadsuel C on 3/27/23.
   
 */
-"WELCOME_LABEL_TITLE" = "Welcome";
-"WELCOME_LABEL_DESCRIPTION"  = "Parental Control was developed to keep your family safe from screen addiction and harmful Internet content.";
-"WELCOME_LABEL_TERMS" = "By ticking this box, I consent to the Privacy Terms";
-"WELCOME_LABEL_LICENSE_AGREEMENT" = "By ticking this box, I consent to the End User License Agreement";
-"WELCOME_LABEL_PRIVACY_TERMS" = "Privacy Terms";
-"WELCOME_BUTTON_TITLE" = "Continue";
-"WELCOME_ALERT_TITLE_LABEL" = "Attention";
-"WELCOME_ALERT_DESCRIPTION_LABEL" = "Please read and agree to the License Agreement and Privacy Terms before you continue.";
-"OK" = "Ok";
+/* PopUp Screen*/
+"PopUpButtonTitle_Continue" = "Continue";
 
-// Activation screen strings
-"ACTIVATION_LABEL_TITLE" = "Activate the service";
-"ACTIVATION_LABEL_DESCRIPTION" = "The activation key was sent to you. If you cannot find it, please login to the parent portal and go to Devices";
-"ACTIVATION_LABEL_PLACEHOLDER" = "Enter the Key";
-"ACTIVATION_LABEL_BUTTON_TITLE" = "Submit";
+/* Welcome Screen */
+"Welcome_Label_Title" = "Welcome";
+"Welcome_Label_Description"  = "Parental Control was developed to keep your family safe from screen addiction and harmful Internet content.";
+"Welcome_Label_Agree" = "By ticking this box, I consent to the ";
+"Welcome_Label_License_Agreement" = "End User License Agreement";
+"Welcome_Label_Privacy_Terms" = "Privacy Terms";
+"Welcome_Button_Title" = "Continue";
+"Welcome_Alert_Title_Label" = "Attention";
+"Welcome_Alert_Description_Label" = "Please read and agree to the License Agreement and Privacy Terms before you continue.";
+
+/* VPN Screen */
+"VPN_Label_Title" = "VPN Profile";
+"VPN_Label_Description" = "Parental Control uses a VPN connection to keep your family safe from harmful websites. Please install the VPN profile in the next screens. When the VPN is running you will see a VPN icon on the device status bar.";
+"VPN_Button_Title" = "Install";
+
+/*  Activation screen */
+"Activation_Heading_Label_Title" = "Activate the service";
+"Activation_Label_Description" = "The activation key was sent to you. If you cannot find it, please login to the parent portal and go to \"Devices\".";
+"Activation_PlaceHolder" = "Enter the key";
+"Activation_Button_Title" = "Submit";
+"Activation_Alert_Key_Expired_Title" = "Key expired";
+"Activation_Alert_Key_Expired_Description" = "The key expired. Please login to the parent portal and go to \"Devices\". You can generate a new key.";
+"Activation_Alert_IncorrectKey_Title" = "Incorrect key";
+"Activation_Alert_Incorrectkey_Description" = "Keys are case sensitive. Please check that you entered the correct key.";
+"Activation_Alert_Button_Ok" = "Ok";
 
 // Home screen strings
 
-"HOME_LABEL_TITLE" = "Etisalat child secure app";
-"HOME_LABEL_DISCRIPTION" = "Protecting this device any place any time";
-"HOME_LABEL_TERMS_BUTTON_TITLE" = "Privacy Terms";
-"HOME_LABEL_ABOUT_BUTTON_TITLE" = "About";
-
-// VPN Screen
-
-"VPN_LABEL_TITLE" = "VPN Profile";
-"VPN_LABEL_DISCRIPTION" = "Parental Control uses a VPN connection to keep your family safe from harmful websites. Please install the VPN profile in the next screens. When the VPN is running you will see a VPN icon on the device status bar.";
-"VPN_LABEL_BUTTON_TITLE" = "Install";
+"Home_Lable_Title" = "Etisalat child secure app";
+"Home_Lable_Discription" = "Protecting this device any place any time";
+"Home_Lable_Terms_button_title" = "Privacy Terms";
+"HOME_Label_About_Button_Title" = "About";
 
 //Success screen
 
-"SUCCESS_LABEL_TITLE" = "Congratulations, you made it!";
-"SUCCESS_LABEL_DISCRIPTION" = "This device is now protected";
-"SUCCESS_BUTTON_TITLE" = "Done";
+"SuccessLableTitle" = "Congratulations, you made it!";
+"SuccessDescription" = "This device is now protected";
+"SuccessButtonTitle" = "Done";
 
 //About the appliction
 

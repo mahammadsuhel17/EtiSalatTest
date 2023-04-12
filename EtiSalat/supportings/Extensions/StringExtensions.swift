@@ -1,8 +1,8 @@
 //
 //  StringExtensions.swift
-//  EtiSalat
+//  Allot
 //
-//  Created by Mahammadsuel C on 3/27/23.
+//  Created by Mani Deepika J M on 3/16/23.
 //
 
 import Foundation

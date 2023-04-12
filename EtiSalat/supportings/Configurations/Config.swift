@@ -1,20 +1,20 @@
 //
 //  Config.swift
-//  EtiSalat
+//  Allot
 //
-//  Created by Mahammadsuel C on 3/27/23.
+//  Created by Mani Deepika J M on 3/16/23.
 //
 
 import Foundation
 import UIKit
 
 //Font Sizes
-let TitleFontSize = 24
-let DescriptionFontSize = 16
-let ButtonFontSize = 16
 let ExtraSmallFontSize = 12
 let SmallTitleFontSize = 14
-let AlertTitleSize = 22
+let TitleFontSize = 16
+let LargeTitleSize = 22
+let XLargeTitleFontSize = 24
+let headingFontSize = 20
 
 //Font Names
 let RegularTextFontName = "Roboto-Regular"
@@ -23,17 +23,22 @@ let BoldTextFontName = "Roboto-Bold"
 
 struct APPFont {
     //Font Constants
-    static let title = UIFont(name: BoldTextFontName, size: CGFloat(TitleFontSize))
-    static let description = UIFont(name: RegularTextFontName, size: CGFloat(DescriptionFontSize))
-    static let button = UIFont(name: BoldTextFontName, size: CGFloat(ButtonFontSize))
+    static let title = UIFont(name: BoldTextFontName, size: CGFloat(XLargeTitleFontSize))
+    static let description = UIFont(name: RegularTextFontName, size: CGFloat(TitleFontSize))
+    static let button = UIFont(name: BoldTextFontName, size: CGFloat(TitleFontSize))
     static let extraSmall = UIFont(name: RegularTextFontName, size: CGFloat(ExtraSmallFontSize))
     static let smallTitle = UIFont(name: MediumTextFontName, size: CGFloat(SmallTitleFontSize))
-    static let alertTitle = UIFont(name: BoldTextFontName, size: CGFloat(AlertTitleSize))
+    static let alertTitle = UIFont(name: BoldTextFontName, size: CGFloat(LargeTitleSize))
     static let alertButton = UIFont(name: BoldTextFontName, size: CGFloat(SmallTitleFontSize))
+    static let heading = UIFont(name: MediumTextFontName, size: CGFloat(headingFontSize))
+    static let body = UIFont(name: RegularTextFontName, size: CGFloat(SmallTitleFontSize))
+    static let bodyMedium = UIFont(name: MediumTextFontName, size: CGFloat(SmallTitleFontSize))
 }
+
 
 struct APPThemeColor {
     //Font Constants
+    static let primaryColor = UIColor(hexString: "#E00800")
     static let title = UIColor(hexString: "#0A0A0A")
     static let description = UIColor(hexString: "#353738")
     static let disabledButtonBackground = UIColor(hexString: "#CCCCCC")
@@ -43,4 +48,5 @@ struct APPThemeColor {
     static let link = UIColor(hexString: "#3366CC")
     static let black = UIColor(hexString: "#000000")
     static let alertButtonBG = UIColor(hexString: "#EEEEEE")
+    static let trasparentBackground = UIColor(hexString: "#000000CC")
 }

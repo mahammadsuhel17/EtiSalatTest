@@ -1,8 +1,8 @@
 //
 //  UILabelExtension.swift
-//  EtiSalat
+//  Allot
 //
-//  Created by Mahammadsuel C on 3/27/23.
+//  Created by Mani Deepika J M on 3/27/23.
 //
 
 import Foundation
@@ -70,6 +70,15 @@ extension UILabel {
         }
     
     
+}
+
+extension UILabel {
+    func onClick(target: Any, _ selector: Selector) {
+        isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: target, action: selector)
+        tap.numberOfTapsRequired = 1
+        addGestureRecognizer(tap)
+    }
 }
 
 

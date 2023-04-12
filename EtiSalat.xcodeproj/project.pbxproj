@@ -10,6 +10,15 @@
 		1DF8997FB8CAC8AF324E468C /* Pods_EtiSalatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F79AFDB07C9E18C9890F92 /* Pods_EtiSalatTests.framework */; };
 		2C1A68470C3AF9C4AC7F1B6F /* Pods_EtiSalat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5B6375AC1D93ABEF45F079 /* Pods_EtiSalat.framework */; };
 		2E7DE4401A40DF07AAFC8A6C /* Pods_EtiSalat_EtiSalatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8866FF8DCA609F6002EF7C7 /* Pods_EtiSalat_EtiSalatUITests.framework */; };
+		F502E33529DD53BB009A6296 /* ActivationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E33429DD53BB009A6296 /* ActivationModel.swift */; };
+		F502E33729DD53DF009A6296 /* ActivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E33629DD53DF009A6296 /* ActivationViewModel.swift */; };
+		F502E33929DD7C28009A6296 /* TextFieldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E33829DD7C28009A6296 /* TextFieldTheme.swift */; };
+		F502E33E29DD8D16009A6296 /* SuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E33D29DD8D16009A6296 /* SuccessViewModel.swift */; };
+		F502E34029DD8D35009A6296 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E33F29DD8D35009A6296 /* SuccessModel.swift */; };
+		F502E34329DDAA19009A6296 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E34229DDAA19009A6296 /* HomeModel.swift */; };
+		F502E34529DDAA31009A6296 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502E34429DDAA31009A6296 /* HomeViewModel.swift */; };
+		F511778029D2E05B00EE078A /* borderBottomWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511777F29D2E05B00EE078A /* borderBottomWidth.swift */; };
+		F511778229D2FB3400EE078A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511778129D2FB3400EE078A /* CustomTextFields.swift */; };
 		F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FA29C077EF00D73B09 /* AppDelegate.swift */; };
 		F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51249FC29C077EF00D73B09 /* SceneDelegate.swift */; };
 		F5124A0429C077F100D73B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5124A0329C077F100D73B09 /* Assets.xcassets */; };
@@ -27,7 +36,7 @@
 		F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */; };
 		F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */; };
 		F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */; };
-		F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */; };
+		F53E875129DBF54C00C8DE45 /* loaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53E875029DBF54C00C8DE45 /* loaderButton.swift */; };
 		F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */; };
 		F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D3AE29C1DB1A00C92BFD /* PopUp.swift */; };
 		F548159D29CC2FB5002F2027 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159129CC2FB4002F2027 /* Roboto-Regular.ttf */; };
@@ -42,15 +51,33 @@
 		F54815A629CC2FB5002F2027 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159A29CC2FB5002F2027 /* Roboto-ThinItalic.ttf */; };
 		F54815A729CC2FB5002F2027 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159B29CC2FB5002F2027 /* Roboto-LightItalic.ttf */; };
 		F54815A829CC2FB5002F2027 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F548159C29CC2FB5002F2027 /* Roboto-Light.ttf */; };
-		F55AFCAF29D162C400944D33 /* UIColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCAE29D162C400944D33 /* UIColorManager.swift */; };
-		F55AFCC229D1659000944D33 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC129D1659000944D33 /* AlertView.swift */; };
-		F55AFCC429D1668F00944D33 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC329D1668F00944D33 /* Config.swift */; };
-		F55AFCC629D1673D00944D33 /* FileUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */; };
 		F55AFCC729D167CE00944D33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55AFCC929D167CE00944D33 /* Localizable.strings */; };
-		F55AFCCC29D1694700944D33 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCCB29D1694700944D33 /* StringExtensions.swift */; };
-		F55AFCCE29D1792C00944D33 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */; };
 		F561C0EB29CC8892007D0B76 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561C0EA29CC8892007D0B76 /* TestViewController.swift */; };
-		F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1491B29C30772006BA693 /* UIcolors.swift */; };
+		F5CDF1A029DC171100B19493 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF19F29DC171100B19493 /* UITextViewExtension.swift */; };
+		F5CDF1A229DC178F00B19493 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1A129DC178F00B19493 /* UILabelExtension.swift */; };
+		F5CDF1A829DC1BEC00B19493 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1A729DC1BEC00B19493 /* UITextFieldExtension.swift */; };
+		F5CDF1AA29DC1BF700B19493 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1A929DC1BF700B19493 /* BundleExtension.swift */; };
+		F5CDF1AC29DC1C0100B19493 /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1AB29DC1C0100B19493 /* UITapGestureRecognizerExtension.swift */; };
+		F5CDF1AE29DC1C0C00B19493 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1AD29DC1C0C00B19493 /* NSAttributedStringExtension.swift */; };
+		F5CDF1B029DC1C3F00B19493 /* UIColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1AF29DC1C3F00B19493 /* UIColorManager.swift */; };
+		F5CDF1C229DC299700B19493 /* AppWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1B929DC299700B19493 /* AppWebViewViewController.swift */; };
+		F5CDF1C329DC299700B19493 /* VPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1BB29DC299700B19493 /* VPNViewController.swift */; };
+		F5CDF1C429DC299700B19493 /* VPNModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1BC29DC299700B19493 /* VPNModel.swift */; };
+		F5CDF1C529DC299700B19493 /* VPNViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1BD29DC299700B19493 /* VPNViewModel.swift */; };
+		F5CDF1C629DC299700B19493 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1BF29DC299700B19493 /* WelcomeViewController.swift */; };
+		F5CDF1C729DC299700B19493 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1C029DC299700B19493 /* WelcomeViewModel.swift */; };
+		F5CDF1C829DC299700B19493 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1C129DC299700B19493 /* WelcomeModel.swift */; };
+		F5CDF1CD29DC29D200B19493 /* Allot-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1CA29DC29D200B19493 /* Allot-Config.swift */; };
+		F5CDF1CE29DC29D200B19493 /* EtiSalat-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1CB29DC29D200B19493 /* EtiSalat-Config.swift */; };
+		F5CDF1CF29DC29D200B19493 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1CC29DC29D200B19493 /* Config.swift */; };
+		F5CDF1D529DC29F900B19493 /* LabelTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1D129DC29F900B19493 /* LabelTheme.swift */; };
+		F5CDF1D629DC29F900B19493 /* TextViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1D229DC29F900B19493 /* TextViewTheme.swift */; };
+		F5CDF1D729DC29F900B19493 /* ButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1D329DC29F900B19493 /* ButtonTheme.swift */; };
+		F5CDF1D829DC29F900B19493 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1D429DC29F900B19493 /* AlertView.swift */; };
+		F5CDF1DA29DC2A6F00B19493 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1D929DC2A6F00B19493 /* StringExtensions.swift */; };
+		F5CDF1DC29DC2A9300B19493 /* MaxLength-UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1DB29DC2A9300B19493 /* MaxLength-UITextfield.swift */; };
+		F5CDF1DE29DC2AAD00B19493 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1DD29DC2AAD00B19493 /* UIViewControllerExtension.swift */; };
+		F5CDF1E229DC3A5200B19493 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF1E129DC3A5200B19493 /* LoaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +107,15 @@
 		B94590F8C8E89DB6B49EB8E3 /* Pods-EtiSalat-EtiSalatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalat-EtiSalatUITests.debug.xcconfig"; path = "Target Support Files/Pods-EtiSalat-EtiSalatUITests/Pods-EtiSalat-EtiSalatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8866FF8DCA609F6002EF7C7 /* Pods_EtiSalat_EtiSalatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EtiSalat_EtiSalatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB8ED7D95E6E330D6F5E81A /* Pods-EtiSalatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EtiSalatTests.release.xcconfig"; path = "Target Support Files/Pods-EtiSalatTests/Pods-EtiSalatTests.release.xcconfig"; sourceTree = "<group>"; };
+		F502E33429DD53BB009A6296 /* ActivationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationModel.swift; sourceTree = "<group>"; };
+		F502E33629DD53DF009A6296 /* ActivationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewModel.swift; sourceTree = "<group>"; };
+		F502E33829DD7C28009A6296 /* TextFieldTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTheme.swift; sourceTree = "<group>"; };
+		F502E33D29DD8D16009A6296 /* SuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewModel.swift; sourceTree = "<group>"; };
+		F502E33F29DD8D35009A6296 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		F502E34229DDAA19009A6296 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F502E34429DDAA31009A6296 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F511777F29D2E05B00EE078A /* borderBottomWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderBottomWidth.swift; sourceTree = "<group>"; };
+		F511778129D2FB3400EE078A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		F51249F729C077EF00D73B09 /* EtiSalat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtiSalat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51249FA29C077EF00D73B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F51249FC29C077EF00D73B09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +137,7 @@
 		F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
 		F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
-		F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNViewController.swift; sourceTree = "<group>"; };
+		F53E875029DBF54C00C8DE45 /* loaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaderButton.swift; sourceTree = "<group>"; };
 		F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewController.swift; sourceTree = "<group>"; };
 		F540D3AE29C1DB1A00C92BFD /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		F548159129CC2FB4002F2027 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -116,16 +152,34 @@
 		F548159A29CC2FB5002F2027 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F548159B29CC2FB5002F2027 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F548159C29CC2FB5002F2027 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		F55AFCAE29D162C400944D33 /* UIColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorManager.swift; sourceTree = "<group>"; };
-		F55AFCC129D1659000944D33 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		F55AFCC329D1668F00944D33 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F55AFCC829D167CE00944D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F55AFCCA29D167E100944D33 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F55AFCCB29D1694700944D33 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		F561C0EA29CC8892007D0B76 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		F5D1491B29C30772006BA693 /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
+		F5CDF19F29DC171100B19493 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		F5CDF1A129DC178F00B19493 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		F5CDF1A729DC1BEC00B19493 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		F5CDF1A929DC1BF700B19493 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		F5CDF1AB29DC1C0100B19493 /* UITapGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizerExtension.swift; sourceTree = "<group>"; };
+		F5CDF1AD29DC1C0C00B19493 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		F5CDF1AF29DC1C3F00B19493 /* UIColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorManager.swift; sourceTree = "<group>"; };
+		F5CDF1B929DC299700B19493 /* AppWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWebViewViewController.swift; sourceTree = "<group>"; };
+		F5CDF1BB29DC299700B19493 /* VPNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNViewController.swift; sourceTree = "<group>"; };
+		F5CDF1BC29DC299700B19493 /* VPNModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNModel.swift; sourceTree = "<group>"; };
+		F5CDF1BD29DC299700B19493 /* VPNViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNViewModel.swift; sourceTree = "<group>"; };
+		F5CDF1BF29DC299700B19493 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F5CDF1C029DC299700B19493 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		F5CDF1C129DC299700B19493 /* WelcomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		F5CDF1CA29DC29D200B19493 /* Allot-Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Allot-Config.swift"; sourceTree = "<group>"; };
+		F5CDF1CB29DC29D200B19493 /* EtiSalat-Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EtiSalat-Config.swift"; sourceTree = "<group>"; };
+		F5CDF1CC29DC29D200B19493 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F5CDF1D129DC29F900B19493 /* LabelTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTheme.swift; sourceTree = "<group>"; };
+		F5CDF1D229DC29F900B19493 /* TextViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewTheme.swift; sourceTree = "<group>"; };
+		F5CDF1D329DC29F900B19493 /* ButtonTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTheme.swift; sourceTree = "<group>"; };
+		F5CDF1D429DC29F900B19493 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		F5CDF1D929DC2A6F00B19493 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F5CDF1DB29DC2A9300B19493 /* MaxLength-UITextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MaxLength-UITextfield.swift"; sourceTree = "<group>"; };
+		F5CDF1DD29DC2AAD00B19493 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F5CDF1E129DC3A5200B19493 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +233,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F502E33329DD5381009A6296 /* ActivationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */,
+				F502E33429DD53BB009A6296 /* ActivationModel.swift */,
+				F502E33629DD53DF009A6296 /* ActivationViewModel.swift */,
+			);
+			path = ActivationScreen;
+			sourceTree = "<group>";
+		};
+		F502E33A29DD8CD5009A6296 /* SuccessScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */,
+				F502E33D29DD8D16009A6296 /* SuccessViewModel.swift */,
+				F502E33F29DD8D35009A6296 /* SuccessModel.swift */,
+			);
+			path = SuccessScreen;
+			sourceTree = "<group>";
+		};
+		F502E34129DDA9F0009A6296 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */,
+				F502E34229DDAA19009A6296 /* HomeModel.swift */,
+				F502E34429DDAA31009A6296 /* HomeViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		F51249EE29C077EF00D73B09 = {
 			isa = PBXGroup;
 			children = (
@@ -204,15 +288,12 @@
 		F51249F929C077EF00D73B09 /* EtiSalat */ = {
 			isa = PBXGroup;
 			children = (
+				F5CDF1B729DC299700B19493 /* Screens */,
 				F55AFCAB29D1617C00944D33 /* LaunchScreen */,
 				F5124A2A29C0783A00D73B09 /* SplashScreenViewController.swift */,
 				F5124A2C29C07DFF00D73B09 /* WellcomeViewController.swift */,
-				F540D3AA29C1AAEE00C92BFD /* VPNViewController.swift */,
-				F540D3AC29C1D7E400C92BFD /* ActivationViewController.swift */,
-				F539C2BE29C4427700F3C6F6 /* HomescreenViewController.swift */,
 				F539C2C029C45EF400F3C6F6 /* AboutApplicationViewController.swift */,
 				F539C2C629C4A3AE00F3C6F6 /* BlockViewController.swift */,
-				F539C2C829C4A6D700F3C6F6 /* SuccessViewController.swift */,
 				F561C0EA29CC8892007D0B76 /* TestViewController.swift */,
 				F51249FA29C077EF00D73B09 /* AppDelegate.swift */,
 				F51249FC29C077EF00D73B09 /* SceneDelegate.swift */,
@@ -241,27 +322,14 @@
 			path = EtiSalatUITests;
 			sourceTree = "<group>";
 		};
-		F5124A2E29C087EB00D73B09 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F5124A3229C08C1900D73B09 /* CustomButton.swift */,
-				F5124A3429C093BE00D73B09 /* CheckBox.swift */,
-				F540D3AE29C1DB1A00C92BFD /* PopUp.swift */,
-				F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */,
-				F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */,
-				F55AFCC129D1659000944D33 /* AlertView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		F5124A2F29C087F800D73B09 /* supportings */ = {
 			isa = PBXGroup;
 			children = (
-				F55AFCB029D162FA00944D33 /* Configurations */,
+				F5CDF1D029DC29F900B19493 /* CustomViews */,
+				F5CDF1C929DC29D200B19493 /* Configurations */,
 				F55AFCAD29D162A900944D33 /* Managers */,
 				F5D1491A29C30756006BA693 /* Extensions */,
 				F55AFCAC29D1622500944D33 /* Assets */,
-				F5124A2E29C087EB00D73B09 /* Views */,
 				F548157829CC2ECC002F2027 /* Fonts */,
 			);
 			path = supportings;
@@ -297,6 +365,7 @@
 		F55AFCAC29D1622500944D33 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F5124A3429C093BE00D73B09 /* CheckBox.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -304,26 +373,94 @@
 		F55AFCAD29D162A900944D33 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				F55AFCAE29D162C400944D33 /* UIColorManager.swift */,
+				F5CDF1AF29DC1C3F00B19493 /* UIColorManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		F55AFCB029D162FA00944D33 /* Configurations */ = {
+		F5CDF1B729DC299700B19493 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F55AFCC329D1668F00944D33 /* Config.swift */,
+				F502E34129DDA9F0009A6296 /* HomeScreen */,
+				F502E33A29DD8CD5009A6296 /* SuccessScreen */,
+				F502E33329DD5381009A6296 /* ActivationScreen */,
+				F5CDF1B829DC299700B19493 /* AppWebViewScreen */,
+				F5CDF1BA29DC299700B19493 /* VPNScreen */,
+				F5CDF1BE29DC299700B19493 /* WelcomeScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F5CDF1B829DC299700B19493 /* AppWebViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF1B929DC299700B19493 /* AppWebViewViewController.swift */,
+			);
+			path = AppWebViewScreen;
+			sourceTree = "<group>";
+		};
+		F5CDF1BA29DC299700B19493 /* VPNScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF1BB29DC299700B19493 /* VPNViewController.swift */,
+				F5CDF1BC29DC299700B19493 /* VPNModel.swift */,
+				F5CDF1BD29DC299700B19493 /* VPNViewModel.swift */,
+			);
+			path = VPNScreen;
+			sourceTree = "<group>";
+		};
+		F5CDF1BE29DC299700B19493 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF1BF29DC299700B19493 /* WelcomeViewController.swift */,
+				F5CDF1C029DC299700B19493 /* WelcomeViewModel.swift */,
+				F5CDF1C129DC299700B19493 /* WelcomeModel.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		F5CDF1C929DC29D200B19493 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF1CA29DC29D200B19493 /* Allot-Config.swift */,
+				F5CDF1CB29DC29D200B19493 /* EtiSalat-Config.swift */,
+				F5CDF1CC29DC29D200B19493 /* Config.swift */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		F5CDF1D029DC29F900B19493 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F502E33829DD7C28009A6296 /* TextFieldTheme.swift */,
+				F539C2C429C4854300F3C6F6 /* CustomTableViewCell.swift */,
+				F539C2BC29C43BA700F3C6F6 /* popUpViewController.swift */,
+				F5CDF1D129DC29F900B19493 /* LabelTheme.swift */,
+				F5CDF1D229DC29F900B19493 /* TextViewTheme.swift */,
+				F5CDF1D329DC29F900B19493 /* ButtonTheme.swift */,
+				F5CDF1D429DC29F900B19493 /* AlertView.swift */,
+				F5124A3229C08C1900D73B09 /* CustomButton.swift */,
+				F540D3AE29C1DB1A00C92BFD /* PopUp.swift */,
+				F511778129D2FB3400EE078A /* CustomTextFields.swift */,
+				F53E875029DBF54C00C8DE45 /* loaderButton.swift */,
+				F5CDF1E129DC3A5200B19493 /* LoaderViewController.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		F5D1491A29C30756006BA693 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F5D1491B29C30772006BA693 /* UIcolors.swift */,
-				F55AFCC529D1673D00944D33 /* FileUIViewControllerExtension.swift */,
-				F55AFCCB29D1694700944D33 /* StringExtensions.swift */,
-				F55AFCCD29D1792C00944D33 /* UILabelExtension.swift */,
+				F5CDF1DD29DC2AAD00B19493 /* UIViewControllerExtension.swift */,
+				F5CDF1DB29DC2A9300B19493 /* MaxLength-UITextfield.swift */,
+				F5CDF1D929DC2A6F00B19493 /* StringExtensions.swift */,
+				F5CDF1AD29DC1C0C00B19493 /* NSAttributedStringExtension.swift */,
+				F5CDF1AB29DC1C0100B19493 /* UITapGestureRecognizerExtension.swift */,
+				F5CDF1A929DC1BF700B19493 /* BundleExtension.swift */,
+				F5CDF1A729DC1BEC00B19493 /* UITextFieldExtension.swift */,
+				F5CDF1A129DC178F00B19493 /* UILabelExtension.swift */,
+				F5CDF19F29DC171100B19493 /* UITextViewExtension.swift */,
+				F511777F29D2E05B00EE078A /* borderBottomWidth.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,28 +718,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51249FB29C077EF00D73B09 /* AppDelegate.swift in Sources */,
-				F55AFCC229D1659000944D33 /* AlertView.swift in Sources */,
+				F511778029D2E05B00EE078A /* borderBottomWidth.swift in Sources */,
 				F539C2BF29C4427700F3C6F6 /* HomescreenViewController.swift in Sources */,
-				F55AFCCE29D1792C00944D33 /* UILabelExtension.swift in Sources */,
+				F502E34529DDAA31009A6296 /* HomeViewModel.swift in Sources */,
 				F540D3AF29C1DB1A00C92BFD /* PopUp.swift in Sources */,
 				F51249FD29C077EF00D73B09 /* SceneDelegate.swift in Sources */,
 				F540D3AD29C1D7E400C92BFD /* ActivationViewController.swift in Sources */,
-				F55AFCCC29D1694700944D33 /* StringExtensions.swift in Sources */,
+				F502E33E29DD8D16009A6296 /* SuccessViewModel.swift in Sources */,
 				F5124A3529C093BE00D73B09 /* CheckBox.swift in Sources */,
+				F5CDF1D729DC29F900B19493 /* ButtonTheme.swift in Sources */,
 				F539C2C529C4854300F3C6F6 /* CustomTableViewCell.swift in Sources */,
+				F5CDF1C229DC299700B19493 /* AppWebViewViewController.swift in Sources */,
+				F502E33729DD53DF009A6296 /* ActivationViewModel.swift in Sources */,
+				F5CDF1CF29DC29D200B19493 /* Config.swift in Sources */,
+				F5CDF1CD29DC29D200B19493 /* Allot-Config.swift in Sources */,
+				F5CDF1DA29DC2A6F00B19493 /* StringExtensions.swift in Sources */,
+				F5CDF1D529DC29F900B19493 /* LabelTheme.swift in Sources */,
+				F5CDF1A029DC171100B19493 /* UITextViewExtension.swift in Sources */,
+				F502E33529DD53BB009A6296 /* ActivationModel.swift in Sources */,
+				F511778229D2FB3400EE078A /* CustomTextFields.swift in Sources */,
 				F539C2C129C45EF400F3C6F6 /* AboutApplicationViewController.swift in Sources */,
 				F539C2BD29C43BA700F3C6F6 /* popUpViewController.swift in Sources */,
+				F5CDF1CE29DC29D200B19493 /* EtiSalat-Config.swift in Sources */,
+				F5CDF1AA29DC1BF700B19493 /* BundleExtension.swift in Sources */,
+				F502E34029DD8D35009A6296 /* SuccessModel.swift in Sources */,
+				F5CDF1A229DC178F00B19493 /* UILabelExtension.swift in Sources */,
+				F502E33929DD7C28009A6296 /* TextFieldTheme.swift in Sources */,
+				F5CDF1C529DC299700B19493 /* VPNViewModel.swift in Sources */,
 				F539C2C929C4A6D700F3C6F6 /* SuccessViewController.swift in Sources */,
+				F5CDF1A829DC1BEC00B19493 /* UITextFieldExtension.swift in Sources */,
 				F5124A2D29C07DFF00D73B09 /* WellcomeViewController.swift in Sources */,
-				F540D3AB29C1AAEE00C92BFD /* VPNViewController.swift in Sources */,
-				F5D1491C29C30772006BA693 /* UIcolors.swift in Sources */,
-				F55AFCC629D1673D00944D33 /* FileUIViewControllerExtension.swift in Sources */,
-				F55AFCAF29D162C400944D33 /* UIColorManager.swift in Sources */,
+				F5CDF1D629DC29F900B19493 /* TextViewTheme.swift in Sources */,
+				F5CDF1DC29DC2A9300B19493 /* MaxLength-UITextfield.swift in Sources */,
+				F5CDF1DE29DC2AAD00B19493 /* UIViewControllerExtension.swift in Sources */,
+				F5CDF1AE29DC1C0C00B19493 /* NSAttributedStringExtension.swift in Sources */,
+				F5CDF1C329DC299700B19493 /* VPNViewController.swift in Sources */,
 				F5124A2B29C0783A00D73B09 /* SplashScreenViewController.swift in Sources */,
+				F5CDF1C729DC299700B19493 /* WelcomeViewModel.swift in Sources */,
+				F5CDF1E229DC3A5200B19493 /* LoaderViewController.swift in Sources */,
+				F502E34329DDAA19009A6296 /* HomeModel.swift in Sources */,
 				F539C2C729C4A3AE00F3C6F6 /* BlockViewController.swift in Sources */,
-				F55AFCC429D1668F00944D33 /* Config.swift in Sources */,
+				F53E875129DBF54C00C8DE45 /* loaderButton.swift in Sources */,
+				F5CDF1C629DC299700B19493 /* WelcomeViewController.swift in Sources */,
+				F5CDF1D829DC29F900B19493 /* AlertView.swift in Sources */,
 				F561C0EB29CC8892007D0B76 /* TestViewController.swift in Sources */,
+				F5CDF1B029DC1C3F00B19493 /* UIColorManager.swift in Sources */,
+				F5CDF1AC29DC1C0100B19493 /* UITapGestureRecognizerExtension.swift in Sources */,
+				F5CDF1C429DC299700B19493 /* VPNModel.swift in Sources */,
 				F5124A3329C08C1900D73B09 /* CustomButton.swift in Sources */,
+				F5CDF1C829DC299700B19493 /* WelcomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,7 +960,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.webfilter.EtiSalat1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -825,7 +989,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dollrbird.EtiSalat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.webfilter.EtiSalat1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

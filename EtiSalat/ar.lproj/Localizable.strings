@@ -5,40 +5,40 @@
   Created by Mahammadsuel C on 3/27/23.
   
 */
-"WELCOME_LABEL_TITLE" = "مرحباً";
-"WELCOME_LABEL_DESCRIPTION"  = "تم تطوير المراقبة الأبوية للحفاظ على عائلتك في مأمن من إدمان الشاشة ومحتوى الإنترنت الضار.";
-"WELCOME_LABEL_TERMS" = "بوضع علامة في هذا المربع ، أوافق على شروط الخصوصية";
-"WELCOME_LABEL_LICENSE_AGREEMENT" = "من خلال تحديد هذا المربع ، أوافق على اتفاقية ترخيص المستخدم النهائي";
-"WELCOME_LABEL_PRIVACY_TERMS" = "شروط الخصوصية";
-"WELCOME_BUTTON_TITLE" = "يكمل";
-"WELCOME_ALERT_TITLE_LABEL" = "انتباه";
-"WELCOME_ALERT_DESCRIPTION_LABEL" = "يرجى قراءة اتفاقية الترخيص وشروط الخصوصية والموافقة عليها قبل المتابعة.";
-"OK" = "نعم";
+/* PopUp Screen*/
+"PopUpButtonTitle_Continue" = "Continue";
 
-// Activation screen strings
-"ACTIVATION_LABEL_TITLE" = "Activate the service";
-"ACTIVATION_LABEL_DESCRIPTION" = "The activation key was sent to you. If you cannot find it, please login to the parent portal and go to Devices";
-"ACTIVATION_LABEL_PLACEHOLDER" = "Enter the Key";
-"ACTIVATION_LABEL_BUTTON_TITLE" = "Submit";
+/* Welcome Screen */
+"Welcome_Label_Title" = "مرحباً";
+"Welcome_Label_Description"  = "تم تطوير المراقبة الأبوية للحفاظ على عائلتك من إدمان الهاتف ومحتوى الإنترنت الضار";
+"Welcome_Label_Agree" = "By ticking this box, I consent to the ";
+"Welcome_Label_License_Agreement" = "اتفاقية ترخيص المستخدم";
+"Welcome_Label_Privacy_Terms" = "شروط الخصوصية";
+"Welcome_Button_Title" = "Continue";
+"Welcome_Alert_Title_Label" = "تنبيه";
+"Welcome_Alert_Description_Label" = "يرجى قراءة اتفاقية الرخصة وشروط الخصوصية والموافقة عليهما قبل المتابعة.";
 
-// Home screen strings
+/* VPN Screen */
+"VPN_Label_Title" = "ملف الشبكة الخاصة الافتراضية VPN";
+"VPN_Label_Description" = "تستخدم الرقابة الأبوية ميزة اتصال بالشبكة الخاصة الافتراضية VPN لحماية عائلتك من المواقع الضارة. يرجى تثبيت ملف تعريف VPN في الشاشات التالية. عند تشغيل VPN، سترى علامة VPN على شريط حالة الجهاز.";
+"VPN_Button_Title" = "تثبيت";
 
-"HOME_LABEL_TITLE" = "Etisalat child secure app";
-"HOME_LABEL_DISCRIPTION" = "Protecting this device any place any time";
-"HOME_LABEL_TERMS_BUTTON_TITLE" = "Privacy Terms";
-"HOME_LABEL_ABOUT_BUTTON_TITLE" = "About";
-
-// VPN Screen
-
-"VPN_LABEL_TITLE" = "VPN Profile";
-"VPN_LABEL_DISCRIPTION" = "Parental Control uses a VPN connection to keep your family safe from harmful websites. Please install the VPN profile in the next screens. When the VPN is running you will see a VPN icon on the device status bar.";
-"VPN_LABEL_BUTTON_TITLE" = "Install";
+/*  Activation screen */
+"Activation_Heading_Label_Title" = "تفعيل الخدمة";
+"Activation_Label_Description" = "تم إرسال رمز التفعيل إليك، إذا لم تستطع إيجاده، يرجى تسجيل الدخول إلى البوابة الرئيسية والذهاب إلى \"الأجهزة";
+"Activation_PlaceHolder" = "أدخل الرمز";
+"Activation_Button_Title" = "إرسال الطلب";
+"Activation_Alert_Key_Expired_Title" = "انتهت صلاحية الرمز";
+"Activation_Alert_Key_Expired_Description" = "انتهت صلاحية الرمز. يرجى تسجيل الدخول عبر نافذة Parent Portal والذهاب إلى \"الأجهزة\". يمكنك إنشاء رمز جديد.";
+"Activation_Alert_IncorrectKey_Title" = "الرمز غير صحيح";
+"Activation_Alert_Incorrectkey_Description" = "هذه الرموز مهمة للغاية. يرجى التحقّق من الرمز الذي أدخلته وإعادة المحاولة مرة أخرى.";
+"Activation_Alert_Button_Ok" = "موافق";
 
 //Success screen
 
-"SUCCESS_LABEL_TITLE" = "Congratulations, you made it!";
-"SUCCESS_LABEL_DISCRIPTION" = "This device is now protected";
-"SUCCESS_BUTTON_TITLE" = "Done";
+"SuccessLableTitle" = "Congratulations, you made it!";
+"SuccessDescription" = "This device is now protected";
+"SuccessButtonTitle" = "Done";
 
 //About the appliction
 
